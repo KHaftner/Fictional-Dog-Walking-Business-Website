@@ -173,27 +173,27 @@ nav ul {
     font-size: 1.25rem;
     justify-content: center;
     list-style: none;
-    padding: .5rem 0 .5rem;
+    padding: 0;
     background-color: var(--light-pink);
     border-top: 1px solid var(--darkest-green);
     border-bottom: 1px solid var(--darkest-green);
 }
 
 nav li {
-    padding: 0.2rem 1rem;
+    padding: 0;
 }
 
 nav a,
 nav a:visited {
-    color: var(--darkest-green);
     font-weight: 600;
     letter-spacing: 1px;
     text-decoration: none;
-    transition: 0.3s ease-out;
-}
-
-.nav-bar nav a:hover {
-    color: var(--black);
+    transition: 0.2s ease;
+    display: block;
+    padding: .5rem 1rem;
+    width: 100%;
+    height: 100%;
+    color: var(--almost-black);
 }
 
 .nav-bar a svg {
@@ -201,6 +201,11 @@ nav a:visited {
     height: auto;
     padding: 0;
     margin: -3rem auto 0;
+}
+
+nav a:hover {
+    color: var(--white);
+    background-color: var(--darkish-green);
 }
 
 .logo {
