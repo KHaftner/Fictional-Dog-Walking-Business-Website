@@ -161,6 +161,7 @@ a:hover {
     right: 0;
     top: 0;
     z-index: 5;
+    font-weight: 900;
 }
 
 nav {
@@ -213,10 +214,10 @@ nav a:hover {
 }
 
 .logo p {
-    font-family: var(--fancy-heading);
+    font-family: var(--heading);
     color: black;
     margin-top: -2rem;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 .logo p span {
@@ -412,7 +413,7 @@ nav a:hover {
 -----------------------------------------------------------*/
 
 .site-footer {
-    background-color: var(--white);
+    background-color: var(--light-pink);
     margin: 0 auto;
     text-align: center;
     min-height: 10rem;
@@ -426,7 +427,7 @@ nav a:hover {
 }
 
 .site-footer p {
-    font-family: var(--body);
+    font-family: var(--heading);
     font-size: 1rem;
     margin: 0 auto;
     padding: 0 0.5rem 1rem;
@@ -437,7 +438,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     padding: 1.5rem;
-    background-color: var(--white);
+    background-color: none;
     border: none;
 }
 
