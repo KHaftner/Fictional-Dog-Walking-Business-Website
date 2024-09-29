@@ -469,14 +469,11 @@ nav a:hover {
 }
 
 /*-----------------------------------------------------------
-    REQUIREMENTS PAGE STYLES
+    SHARED STYLES
 -----------------------------------------------------------*/
 
-.req-page-top-wrapper {
+.other-top-wrapper {
     position: relative;
-    margin-top: 11rem;
-    background: url(../media/requirements-page-banner.jpg);
-    background-position-y: 46%;
     background-color: rgba(168, 218, 168, 0.208);
     background-repeat: no-repeat;
     background-size: cover;
@@ -486,9 +483,10 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid var(--alternate-green);
+    margin-top: 11rem;
 }
 
-.req-page-top-wrapper h1 {
+.other-top-wrapper h1 {
     color: var(--light-pink);
     text-shadow: var(--text-shadow);
     font-size: 3rem;
@@ -500,6 +498,24 @@ nav a:hover {
     padding: 1rem 1.5rem;
     font-family: var(--fancy-heading);
     font-weight: 400;
+}
+
+/*-----------------------------------------------------------
+    ABOUT PAGE STYLES
+-----------------------------------------------------------*/
+
+.about-page-top-wrapper {
+    background: url(../media/about-page-banner.jpg);
+    background-position-y: 70%;
+}
+
+/*-----------------------------------------------------------
+    REQUIREMENTS PAGE STYLES
+-----------------------------------------------------------*/
+
+.req-page-top-wrapper {
+    background: url(../media/requirements-page-banner.jpg);
+    background-position-y: 46%;
 }
 
 .requirements-list {
