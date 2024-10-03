@@ -142,7 +142,7 @@ a:hover {
 }
 
 /*-----------------------------------------------------------
-    NAVIGATION BAR
+    NAVIGATION BAR & HAMBURGER MENU
 -----------------------------------------------------------*/
 
 .nav-bar {
@@ -150,14 +150,12 @@ a:hover {
     background-color: var(--white);
     box-shadow: var(--box-shadow);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     font-family: var(--heading);
     gap: 0;
-    min-height: 11rem;
-    justify-content: center;
-    justify-content: flex-end;
+    min-height: 5rem;
+    justify-content: space-between;
     left: 0;
-    padding: 0.5rem 0 0;
     position: fixed;
     right: 0;
     top: 0;
@@ -165,23 +163,26 @@ a:hover {
     font-weight: 900;
 }
 
-nav {
-    width: 100%;
-}
-
-nav ul {
-    display: flex;
-    font-size: 1.25rem;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
+ul.nav-list {
     background-color: var(--light-pink);
     border-top: 1px solid var(--darkest-green);
     border-bottom: 1px solid var(--darkest-green);
+    font-size: 1.25rem;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    right: -100%;
+    text-align: center;
+    transition: right 0.5s ease-out, opacity 0.5s ease-out;
+    visibility: hidden;
+    width: 100%;
 }
 
-nav li {
-    padding: 0;
+.nav-list li {
+    border-radius: 0.5rem;
+    font-size: 1.05rem;
+    margin: 0.5rem;
+    padding: 1rem;
 }
 
 nav a,
@@ -197,28 +198,25 @@ nav a:visited {
     color: var(--almost-black);
 }
 
-.nav-bar a svg {
-    width: 8rem;
-    height: auto;
-    padding: 0;
-    margin: -3rem auto 0;
-}
-
-nav a:hover {
+.nav-bar nav a:hover {
     color: var(--white);
     background-color: var(--darkish-green);
 }
 
-.logo {
+.logo a {
     display: flex;
-    position: relative;
+}
+
+.logo svg {
+    width: 6rem;
 }
 
 .logo p {
     font-family: var(--heading);
     color: black;
-    margin-top: -2rem;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+    width: 82%;
+    padding-top: 0.75rem;
 }
 
 .logo p span {
@@ -226,13 +224,55 @@ nav a:hover {
     color: var(--green);
     font-style: italic;
     font-weight: 900;
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     padding-right: 0.25rem;
 }
 
 .logo p span:last-of-type {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-left: 0.25rem;
+}
+
+button.menu-button,
+button.close-menu {
+    background: var(--light-pink);
+    border: 1px solid var(--darkish-green);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+button.close-menu {
+    background-color: var(--darkish-green);
+    box-shadow: var(--box-shadow);
+    display: none;
+}
+
+.menu-button svg {
+    fill: var(--darkish-green);
+    width: 1.25rem;
+}
+
+.close-menu svg {
+    fill: var(--white);
+    width: 1.25rem;
+}
+
+.nav-list.menu-clicked {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    opacity: 1;
+    right: 0;
+    top: 5rem;
+    visibility: visible;
+}
+
+.nav-list.menu-closing {
+    opacity: 0;
+    right: -100%;
+    transition: none;
+    visibility: hidden;
 }
 
 /*-----------------------------------------------------------
@@ -241,7 +281,7 @@ nav a:hover {
 
 .top-wrapper .above-fold-content {
     position: relative;
-    margin-top: 11rem;
+    margin-top: 5rem;
     background: url(../media/home-top-banner.jpg);
     background-position-y: 62%;
     background-color: rgba(168, 218, 168, 0.208);
@@ -257,15 +297,16 @@ nav a:hover {
 .top-wrapper h1 {
     color: var(--light-pink);
     text-shadow: var(--text-shadow);
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 3vw, 3rem);
     backdrop-filter: blur(5px);
     background-color: #00000044;
     border: 1px solid var(--light-pink);
     border-radius: 0.5rem;
     display: inline;
-    padding: 1.5rem 2rem;
+    padding: 0.5rem;
     font-family: var(--fancy-heading);
     font-weight: 400;
+    max-width: 80%;
 }
 
 /*-----------------------------------------------------------
@@ -506,7 +547,9 @@ nav a:hover {
 
 .about-page-top-wrapper {
     background: url(../media/about-page-banner.jpg);
-    background-position-y: 10%;
+    background-size: cover;
+    background-position: 60% 60%;
+    background-repeat: no-repeat;
 }
 
 /*-----------------------------------------------------------
@@ -551,3 +594,91 @@ nav a:hover {
 /*-----------------------------------------------------------
     MEDIA QUERIES
 -----------------------------------------------------------*/
+
+@media (min-width: 65em) {
+    /* Index Top */
+    .top-wrapper h1 {
+        max-width: none;
+        padding: 1.5rem 2rem;
+    }
+
+    .top-wrapper .above-fold-content {
+        margin-top: 11rem;
+    }
+
+    /* Navigation Bar */
+
+    button.menu-button {
+        display: none;
+    }
+
+    .logo a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo p {
+        font-size: 1.75rem;
+        padding-top: 0.75rem;
+    }
+
+    .logo p span {
+        font-size: 1.25rem;
+    }
+
+    .logo p span:last-of-type {
+        font-size: 2rem;
+    }
+
+    .logo a svg {
+        width: 8rem;
+        height: auto;
+        padding: 0;
+        margin: 0.5rem auto -4rem;
+        position: relative;
+        top: -1.5rem;
+    }
+
+    .logo p {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .main-nav ul {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        position: relative;
+        opacity: 1;
+        top: 0;
+        right: 0;
+        visibility: visible;
+    }
+
+    .main-nav li {
+        padding: 0;
+        margin: 0;
+        background: none;
+        box-shadow: none;
+        font-size: 1.25rem;
+    }
+
+    nav a,
+    nav a:visited {
+        letter-spacing: 0.15rem;
+        padding: 0.5rem 1rem;
+    }
+}
