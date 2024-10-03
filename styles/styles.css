@@ -70,8 +70,9 @@ File: styles.css
 
     /* Text Backgrounds */
     --transparent-green: #8bd5ae49;
-    --transparent-pink: #f5d2d67e;
-    --transparent-pink-2: #ff7bab4f;
+    --transparent-dark-green: #277a5357;
+    --transparent-pink: #fce8eb44;
+    --transparent-purple: #a393b0bd;
     --transparent-white: #ffffff88;
 
     /* Font Styles */
@@ -280,18 +281,18 @@ button.close-menu {
 -----------------------------------------------------------*/
 
 .top-wrapper .above-fold-content {
-    position: relative;
-    margin-top: 5rem;
+    align-items: center;
     background: url(../media/home-top-banner.jpg);
-    background-position-y: 62%;
-    background-color: rgba(168, 218, 168, 0.208);
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-position: 50% 62%;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 60vh;
-    background-blend-mode: lighten;
     display: flex;
-    align-items: center;
     justify-content: center;
+    margin-top: 5rem;
+    min-height: 60vh;
+    position: relative;
 }
 
 .top-wrapper h1 {
@@ -515,11 +516,7 @@ button.close-menu {
 
 .other-top-wrapper {
     position: relative;
-    background-color: rgba(168, 218, 168, 0.208);
-    background-repeat: no-repeat;
-    background-size: cover;
     min-height: 40vh;
-    background-blend-mode: lighten;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -542,13 +539,67 @@ button.close-menu {
 }
 
 /*-----------------------------------------------------------
+    SERVICES PAGE STYLES
+-----------------------------------------------------------*/
+
+.services-top-wrapper {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/services-page-banner.jpg);
+    background-size: cover;
+    background-position: 50% 70%;
+    background-repeat: no-repeat;
+}
+
+/*-----------------------------------------------------------
     ABOUT PAGE STYLES
 -----------------------------------------------------------*/
 
 .about-page-top-wrapper {
-    background: url(../media/about-page-banner.jpg);
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/about-page-banner.jpg);
     background-size: cover;
-    background-position: 60% 60%;
+    background-position: 50% 45%;
+    background-repeat: no-repeat;
+}
+
+/*-----------------------------------------------------------
+    CONTACT PAGE STYLES
+-----------------------------------------------------------*/
+
+.contact-top-wrapper {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/contact-page-banner.jpg);
+    background-size: cover;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+}
+
+/*-----------------------------------------------------------
+    GALLERY PAGE STYLES
+-----------------------------------------------------------*/
+
+.gallery-top-wrapper {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/gallery-page-banner.jpg);
+    background-size: cover;
+    background-position: 50% 75%;
+    background-repeat: no-repeat;
+}
+
+/*-----------------------------------------------------------
+    BLOG PAGE STYLES
+-----------------------------------------------------------*/
+
+.blog-top-wrapper {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/blog-page-banner.jpg);
+    background-size: cover;
+    background-position: 50% 55%;
     background-repeat: no-repeat;
 }
 
@@ -557,8 +608,12 @@ button.close-menu {
 -----------------------------------------------------------*/
 
 .req-page-top-wrapper {
-    background: url(../media/requirements-page-banner.jpg);
-    background-position-y: 46%;
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/requirements-page-banner.jpg);
+    background-size: cover;
+    background-position: 50% 45%;
+    background-repeat: no-repeat;
 }
 
 .requirements-list {
