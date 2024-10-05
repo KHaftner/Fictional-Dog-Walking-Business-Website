@@ -146,12 +146,22 @@ File: requirements.html
             </button>
             <ul id="nav-list" class="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services Offered</a></li>
+                <li class="dropdown"><a href="services.html">Services Offered</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Walking Services</a></li>
+                        <li><a href="#">Boarding Services</a></li>
+                    </ul>
+                </li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="requirements.html">Project Requirements</a></li>
+                <li class="dropdown"><a href="requirements.html">Project Requirements</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Nine Websites</a></li>
+                        <li><a href="#">Project Checklist</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -164,8 +174,8 @@ File: requirements.html
             <h2>Main Requirements</h2>
             <ul>
                 <li>Overall development/design is appealing & responsive.</li>
-                <li>Ensure the website's homepage is named index.html.</li>
-                <li>Multiple images were used.</li>
+                <li class="done">Ensure the website's homepage is named index.html.</li>
+                <li class="done">Multiple images were used.</li>
                 <li>Forms with form validations.</li>
                 <li>Multiple stylesheets for mobile, desktop, etc.</li>
                 <li>JavaScript usage: Please explain what you used and where.</li>
@@ -265,7 +275,7 @@ File: requirements.html
             <h2>Video Demonstration</h2>
             <p>As part of your assignment submission, you are required to submit a short video clip (3-5 minutes)
                 demonstrating the key functionalities and features of your app/assignment. The video should clearly
-                showcase the following:
+                showcase the following:</p>
             <ul>
                 <li>Introduction: Briefly introduce the app or project and its purpose.</li>
                 <li>Core Features: Demonstrate the core features and functionality of the app/assignment. Highlight key
@@ -278,7 +288,30 @@ File: requirements.html
                 <li>Ensure that the video is clear, concise, and easy to follow. You may use screen recording software,
                     voice narration, or on-screen annotations to enhance your demonstration. </li>
             </ul>
-            </p>
+            <h2>Nine Websites</h2>
+            <nav class="websites-list">
+                <dl>
+                    <dl>
+                        <dt><a href="https://uptowndawg.com/">Uptown Dawg</a>
+                        </dt>
+                        <dd>A local dog walking business based in Port Moody, British Columbia, with a nice, clean
+                            layout. I could tell it was a
+                            WordPress site before I checked it out on Wappalyzer. Its menu has some hover effects that I
+                            enjoy. This website was a good resource to guide me towards the types of services and pages
+                            my website should include.</dd>
+                        <dt><a href="http://wags2whiskers.ca/">Wags to Whiskers</a></dt>
+                        <dd>A local dog walking business based in Coquitlam, British Columbia, whose website magically
+                            transports the visitor to the
+                            year
+                            2002. While I like the nostalgia factor, they would really benefit from a re-design.</dd>
+                        <dl>
+                            <dt><a href="https://wildthymedogs.com/">Wild Thyme Dogs</a></dt>
+                            <dd>A local dog walking business based in Anmore, British Columbia. This website is also
+                                helpful as a reference for the services offered and I enjoy their testimonial page.
+                            </dd>
+                        </dl>
+            </nav>
+
 
         </section>
     </main>

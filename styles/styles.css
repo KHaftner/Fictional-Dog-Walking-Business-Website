@@ -43,6 +43,8 @@ File: styles.css
     --light-green: hsl(142, 93%, 88%);
     --lightest-green: #dbfde7;
     --lightest-green: hsl(141, 89%, 93%);
+    --green-grey: #e4ece6;
+    --green-grey: hsl(135, 18%, 91%);
     --gold: #eccb70;
     --gold: hsl(44, 77%, 68%);
     --darker-purple: #4a315f;
@@ -64,6 +66,7 @@ File: styles.css
 
     /* Box Shadow */
     --box-shadow: 1px 1px 3px #807e7ec9;
+    --dropdown-shadow: 0px 6px 12px 0px var(--alternate-green);
     --heading-text-shadow: 2px 2px 1px #4d4d4d;
     --nav-text-shadow: 0px 1px 1px #808080c9;
     --text-shadow: 1px 1px 1px #4d4d4d;
@@ -142,6 +145,12 @@ a:hover {
     color: var(--black);
 }
 
+dl,
+dt,
+dd {
+    font-family: var(--body);
+}
+
 /*-----------------------------------------------------------
     NAVIGATION BAR & HAMBURGER MENU
 -----------------------------------------------------------*/
@@ -179,29 +188,37 @@ ul.nav-list {
     width: 100%;
 }
 
-.nav-list li {
+.nav-list > li {
     border-radius: 0.5rem;
     font-size: 1.05rem;
-    margin: 0.5rem;
-    padding: 1rem;
+    position: relative;
 }
 
-nav a,
-nav a:visited {
+.nav-list > li a,
+.nav-list > li a:visited {
+    border-bottom: 1px dotted var(--transparent-dark-green);
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
     text-decoration: none;
     transition: 0.2s ease;
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem;
     width: 100%;
     height: 100%;
     color: var(--almost-black);
 }
 
-.nav-bar nav a:hover {
-    color: var(--white);
-    background-color: var(--darkish-green);
+.nav-bar nav li.dropdown ul.dropdown-content {
+    display: block;
+    position: relative;
+}
+
+.nav-bar nav li ul li a {
+    background-color: var(--green-grey);
+    border: none;
+    color: var(--almost-black);
+    font-size: 0.9rem;
+    padding: 0.5rem;
 }
 
 .logo a {
@@ -646,6 +663,26 @@ button.close-menu {
     padding-bottom: 4rem;
     margin-bottom: 0;
 }
+
+.requirements-list nav.websites-list dl a {
+    color: var(--darkish-green);
+    font-size: 1.15rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    text-shadow: var(--nav-text-shadow);
+    transition: all 0.3s ease;
+}
+
+.requirements-list nav.websites-list dl a:hover {
+    text-decoration: underline;
+    color: var(--green);
+}
+
+.requirements-list dd {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.5rem 1rem 2rem 3rem;
+}
 /*-----------------------------------------------------------
     MEDIA QUERIES
 -----------------------------------------------------------*/
@@ -731,9 +768,59 @@ button.close-menu {
         font-size: 1.25rem;
     }
 
-    nav a,
-    nav a:visited {
-        letter-spacing: 0.15rem;
+    .nav-list > li a,
+    .nav-list > li a:visited {
+        border: none;
         padding: 0.5rem 1rem;
     }
+
+    .nav-bar nav li.dropdown ul.dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--white);
+        width: 100%;
+        box-shadow: var(--dropdown-shadow);
+        top: 2.5rem;
+    }
+
+    .nav-bar ul.dropdown-content li a {
+        background-color: var(--white);
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    ul.nav-list li ul.dropdown-content li a {
+        text-align: left;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-list > li a:hover,
+    .nav-list > li a:active {
+        color: var(--white);
+        background-color: var(--darkish-green);
+        border-radius: 0;
+    }
+
+    .nav-bar nav li.dropdown:hover > a {
+        color: var(--white);
+        background-color: var(--darkish-green);
+    }
+
+    .nav-bar nav li.dropdown:hover ul.dropdown-content {
+        display: block;
+    }
+
+    ul.dropdown-content li a:hover {
+        background-color: var(--green-grey);
+        color: var(--alternate-dark-green);
+    }
+}
+
+/* Temporary Class to Check off Tasks, Remove Later */
+.done {
+    font-weight: 700;
+}
+
+.done::after {
+    content: " ✅";
 }
