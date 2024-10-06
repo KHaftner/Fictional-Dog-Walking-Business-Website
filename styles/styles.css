@@ -206,7 +206,7 @@ ul.nav-list {
     text-decoration: none;
     transition: 0.2s ease;
     display: block;
-    padding: 0.75rem;
+    padding: 0.85rem;
     width: 100%;
     height: 100%;
     color: var(--black);
@@ -218,11 +218,8 @@ ul.nav-list {
 }
 
 .nav-bar nav li ul li a {
-    background-color: var(--green-grey);
     border: none;
     color: var(--almost-black);
-    font-size: 0.9rem;
-    padding: 0.5rem;
 }
 
 .logo a {
@@ -681,13 +678,60 @@ button.close-menu {
     SERVICES PAGE STYLES
 -----------------------------------------------------------*/
 
-.services-top-wrapper {
+.services-page-header {
     background-blend-mode: soft-light;
     background-color: var(--transparent-pink);
     background-image: url(../media/services-page-banner.jpg);
     background-size: cover;
-    background-position: 50% 70%;
+    background-position: 50% 68%;
     background-repeat: no-repeat;
+}
+
+.our-services {
+    background-color: var(--light-pink);
+}
+
+.our-services h2 {
+    text-align: left;
+    font-family: var(--heading);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    border-bottom: 8px dotted var(--white);
+    padding: 2rem 1rem 0;
+    margin: 0 auto;
+}
+
+.our-services figure img {
+    margin: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    max-width: 18rem;
+}
+
+.services-bottom {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../media/services-bottom-image.jpg);
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-purple);
+    background-size: cover;
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    padding-bottom: 5rem;
+}
+
+.services-bottom p {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    max-width: 80%;
+    letter-spacing: 0.25rem;
+    backdrop-filter: blur(1rem);
+    padding: 2rem;
+    border: 1px solid var(--transparent-black);
+    border-radius: 2rem;
+    font-family: var(--fancy-heading);
+    text-shadow: var(--nav-text-shadow);
 }
 
 /*-----------------------------------------------------------
