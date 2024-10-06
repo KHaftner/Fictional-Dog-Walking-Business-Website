@@ -5,6 +5,7 @@
 const menuButton = document.getElementById("menu-button");
 const closeButton = document.getElementById("close-menu");
 const navList = document.getElementById("nav-list");
+const navBar = document.querySelector(".nav-bar");
 
 const menuClicked = "menu-clicked";
 const menuClosing = "menu-closing";
@@ -29,17 +30,16 @@ function closeMenu() {
 }
 
 // Detect scroll and add/remove class.
-/*
+
 function scrollChange() {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 80) {
         navBar.classList.add("scrolled");
     } else {
         navBar.classList.remove("scrolled");
     }
 }
-    */
 
 // Event listeners.
 menuButton.addEventListener("click", openMenu);
 closeButton.addEventListener("click", closeMenu);
-// window.addEventListener("scroll", scrollChange);
+window.addEventListener("scroll", scrollChange);
