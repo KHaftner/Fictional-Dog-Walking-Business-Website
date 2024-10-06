@@ -78,6 +78,7 @@ File: styles.css
     --transparent-dark-green: #277a5357;
     --transparent-pink: #fce8eb44;
     --transparent-purple: #a393b0bd;
+    --transparent-dark-purple: #45216348;
     --transparent-white: #ffffff69;
     --transparent-black: #1c1c1c76;
 
@@ -655,19 +656,20 @@ button.close-menu {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    border-bottom: 1px solid var(--alternate-green);
     margin-top: 5rem;
     min-height: 45vh;
 }
 
 .other-top-wrapper h1 {
-    color: var(--light-pink);
+    color: var(--white);
+    border-top: 1px solid var(--transparent-white);
+    border-bottom: 1px solid var(--transparent-white);
     text-shadow: var(--text-shadow);
     font-size: clamp(3rem, 4vw, 4rem);
     backdrop-filter: blur(6px);
-    background-color: #00000025;
+    background-color: var(--transparent-dark-purple);
     display: block;
-    margin: 0 0 1rem 0;
+    margin: 0;
     padding: 0;
     font-family: var(--fancy-heading);
     font-weight: 400;
