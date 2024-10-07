@@ -1,0 +1,200 @@
+/************************************************************
+/////////////////////////////////////////////////////////////
+
+COMP 2681, TRU Open Learning
+Final Project
+Dog Walking Business Website
+
+Page: Services Page Style Sheet
+Author: Kassandra Haftner
+Last Updated: 7 Oct 2024
+
+A CSS style sheet for the main Services page.
+
+File: services-styles.css
+
+/////////////////////////////////////////////////////////////
+************************************************************/
+
+/*-----------------------------------------------------------
+    MAIN STYLES
+-----------------------------------------------------------*/
+
+.services-page-header {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/services-page-banner.jpg);
+    background-size: cover;
+    background-position: 50% 68%;
+    background-repeat: no-repeat;
+}
+
+.our-services {
+    background-color: var(--light-pink);
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.our-services a.service-link:hover,
+.our-services a.service-link:active {
+    background-color: var(--almost-black);
+    color: var(--light-pink);
+    transition: 0.6s ease-in-out;
+}
+
+.our-services h2 {
+    text-align: center;
+    font-family: var(--heading);
+    font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+    border-bottom: 8px dotted var(--white);
+    padding: 2rem 1rem 0;
+    margin: 0 auto 1rem;
+}
+
+.our-services figure {
+    padding: 0.5rem;
+}
+
+.our-services figure img {
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: clamp(18rem, 40vw, 25rem);
+    margin: 1rem auto;
+}
+
+.service-text > p:first-of-type {
+    line-height: 2.5rem;
+    padding: 0 0.5rem;
+}
+
+.service-text > p:last-of-type {
+    padding: 2rem 0;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.service-text a.service-link {
+    color: var(--almost-black);
+    font-weight: 400;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    border: 1px solid var(--almost-black);
+    padding: 1rem 2rem;
+    text-align: center;
+    max-width: 16rem;
+    margin: 0 1rem;
+}
+
+.service-text p {
+    max-width: 50rem;
+}
+
+.services-bottom {
+    clear: both;
+    min-height: max(40rem, 50vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../media/services-bottom-image.jpg);
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-purple);
+    background-size: cover;
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    padding-bottom: 5rem;
+}
+
+.services-bottom p {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    max-width: 80%;
+    letter-spacing: 0.25rem;
+    backdrop-filter: blur(1rem);
+    padding: 2rem;
+    border: 1px solid var(--transparent-black);
+    border-radius: 2rem;
+    font-family: var(--fancy-heading);
+    text-shadow: var(--nav-text-shadow);
+}
+
+/*-----------------------------------------------------------
+    MEDIA QUERIES
+-----------------------------------------------------------*/
+
+@media (min-width: 50em) {
+    .our-services h2 {
+        padding-bottom: 0.5rem;
+        letter-spacing: 0.35rem;
+    }
+
+    .our-services .service-text p {
+        padding: 0.5rem 1.5rem 1.5rem;
+    }
+
+    .service-text > p:last-of-type {
+        text-align: left;
+        margin: 0;
+        padding-left: 0.5rem;
+    }
+
+    .our-services figure {
+        float: right;
+    }
+
+    .our-services figure img {
+        margin: 0;
+    }
+
+    .walking-service,
+    .boarding-service {
+        margin-bottom: 4rem;
+    }
+}
+
+@media (min-width: 80em) {
+    .our-services h2 {
+        text-align: left;
+        padding-left: 6rem;
+    }
+
+    .walking-service,
+    .boarding-service {
+        margin-bottom: 6rem;
+    }
+
+    .our-services figure {
+        margin-right: 10rem;
+    }
+
+    .our-services figure img {
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        width: 30rem;
+    }
+
+    .service-text > p:first-of-type {
+        margin-top: 2rem;
+        margin-left: 5rem;
+    }
+
+    .service-text > p:last-of-type {
+        margin-left: 5rem;
+    }
+}
+
+@media (min-width: 100em) {
+    .our-services h2 {
+        padding-left: 16rem;
+    }
+
+    .service-text > p:first-of-type {
+        margin-left: 15rem;
+    }
+
+    .service-text > p:last-of-type {
+        margin-left: 15rem;
+    }
+
+    .our-services figure {
+        margin-right: 20rem;
+    }
+}

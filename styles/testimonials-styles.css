@@ -1,0 +1,34 @@
+/************************************************************
+/////////////////////////////////////////////////////////////
+
+COMP 2681, TRU Open Learning
+Final Project
+Dog Walking Business Website
+
+Page: Testimonials Page Style Sheet
+Author: Kassandra Haftner
+Last Updated: 7 Oct 2024
+
+A CSS style sheet for the Testimonials page.
+
+File: testimonials-styles.css
+
+/////////////////////////////////////////////////////////////
+************************************************************/
+
+/*-----------------------------------------------------------
+    MAIN STYLES
+-----------------------------------------------------------*/
+
+.blog-top-wrapper {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/blog-page-banner.jpg);
+    background-size: cover;
+    background-position: 50% 55%;
+    background-repeat: no-repeat;
+}
+
+/*-----------------------------------------------------------
+    MEDIA QUERIES
+-----------------------------------------------------------*/

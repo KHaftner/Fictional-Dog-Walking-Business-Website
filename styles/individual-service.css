@@ -1,0 +1,190 @@
+/************************************************************
+/////////////////////////////////////////////////////////////
+
+COMP 2681, TRU Open Learning
+Final Project
+Dog Walking Business Website
+
+Page: Individual Service Page Style Sheet
+Author: Kassandra Haftner
+Last Updated: 7 Oct 2024
+
+A CSS style sheet for the two individual service pages.
+
+File: individual-service.css
+
+/////////////////////////////////////////////////////////////
+************************************************************/
+
+/*-----------------------------------------------------------
+    SHARED STYLES
+-----------------------------------------------------------*/
+
+.individual-service-main {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-white2);
+    background-image: url(../media/walking-service-wallpaper.jpg);
+    background-size: cover;
+    background-position: 70% 5%;
+    background-repeat: no-repeat;
+}
+
+.individual-service-types h2 {
+    border-bottom: 4px dotted var(--white);
+    font-family: var(--body);
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    font-weight: 400;
+    padding-bottom: 0.25rem;
+    padding-top: 3rem;
+    margin-top: -1rem;
+    text-shadow: var(--nav-text-shadow);
+}
+
+.individual-service-types p,
+.prices p {
+    font-size: 1.15rem;
+    padding: 0 1rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.individual-service-types p:last-of-type {
+    padding-bottom: 2rem;
+    margin-bottom: -1rem;
+}
+
+.individual-service-types {
+    background-color: var(--transparent-green);
+}
+
+ol {
+    background-color: var(--transparent-white);
+    border: 1px solid var(--transparent-black);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0.5rem auto;
+    padding: 1rem 2rem;
+    max-width: 40rem;
+    text-align: left;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+ol.walking-ol {
+    max-width: 25rem;
+}
+
+.individual-service-types ol li {
+    font-family: var(--heading);
+    font-size: 1.25rem;
+    padding: 0.25rem 1rem;
+}
+
+.prices h3 {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-family: var(--heading);
+    letter-spacing: 0.25rem;
+    margin: 1rem auto;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+table,
+td,
+th {
+    border: 1px solid var(--purple);
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: var(--fancy-heading);
+}
+
+th {
+    color: var(--white);
+    font-family: var(--heading);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 500;
+    background-color: var(--transparent-purple);
+    letter-spacing: 0.25rem;
+    text-shadow: var(--text-shadow);
+}
+
+td {
+    background-color: var(--transparent-white);
+}
+
+table {
+    width: 18rem;
+    border-collapse: collapse;
+    box-shadow: var(--box-shadow);
+}
+
+.prices {
+    border-top: 4px dotted var(--lightish-green);
+    margin: 1rem auto 0;
+    padding-bottom: 2rem;
+    border-bottom: 4px dotted var(--lightish-green);
+}
+
+.prices p {
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.prices p:last-of-type {
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+.indiv-service-bottom {
+    min-height: max(40rem, 50vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../media/indiv-service-bottom-image.jpg);
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-purple);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.indiv-service-bottom p {
+    font-size: clamp(1.25rem, 3vw, 3rem);
+    max-width: 80%;
+    letter-spacing: 0.25rem;
+    backdrop-filter: blur(1rem);
+    padding: 2rem;
+    border: 1px solid var(--transparent-black);
+    border-radius: 2rem;
+    font-family: var(--fancy-heading);
+    text-shadow: var(--nav-text-shadow);
+}
+
+/*-----------------------------------------------------------
+    WALKING-SPECIFIC STYLES
+-----------------------------------------------------------*/
+
+.walking-page-header {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/walking-page-banner.jpg);
+    background-size: cover;
+    background-position: 40% 65%;
+    background-repeat: no-repeat;
+}
+
+/*-----------------------------------------------------------
+    BOARDING-SPECIFIC STYLES
+-----------------------------------------------------------*/
+
+.boarding-page-header {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/boarding-page-banner.jpg);
+    background-size: cover;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,356 @@
+/************************************************************
+/////////////////////////////////////////////////////////////
+
+COMP 2681, TRU Open Learning
+Final Project
+Dog Walking Business Website
+
+Page: Contact Us Page Style Sheet
+Author: Kassandra Haftner
+Last Updated: 7 Oct 2024
+
+A CSS style sheet for the Contact Us page.
+
+File: contact-styles.css
+
+/////////////////////////////////////////////////////////////
+************************************************************/
+
+/*-----------------------------------------------------------
+    CONTACT PAGE STYLES
+-----------------------------------------------------------*/
+
+.contact-page-header {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/contact-page-banner.jpg);
+    background-size: cover;
+    background-position: 50% 72%;
+    background-repeat: no-repeat;
+}
+
+.contact-form {
+    padding-top: 2rem;
+    margin: 0 auto;
+    max-width: 98%;
+}
+
+.contact-form p {
+    font-weight: 600;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.contact-form p.required-fields {
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-top: -1rem auto 2rem;
+}
+
+form {
+    background-color: var(--transparent-purple);
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+    font-family: var(--body);
+    padding: 0.5rem;
+}
+
+form legend {
+    font-variant: small-caps;
+    font-weight: bold;
+    padding: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+form fieldset {
+    border: 3px dashed var(--transparent-white);
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+form fieldset:last-of-type {
+    border: none;
+}
+
+form fieldset#assistance-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form ::placeholder {
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+input,
+textarea,
+select {
+    border: 1px solid var(--black);
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    margin-top: 0.25rem;
+    padding-left: 0.5rem;
+    width: 100%;
+}
+
+select,
+textarea {
+    background-color: var(--transparent-white);
+    border-radius: 0.5rem;
+}
+
+select {
+    height: 2rem;
+    padding-left: 0.5rem;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    background-color: var(--transparent-white);
+    border-radius: 0.5rem;
+    height: 2rem;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: var(--light-pink);
+    border: 1px solid var(--black);
+    border-radius: 0.5rem;
+    height: 2.75rem;
+    margin: 0.5rem;
+    padding: 0 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus,
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+select:hover,
+textarea:hover,
+input[type="text"]:active,
+input[type="email"]:active,
+input[type="tel"]:active,
+select:active,
+textarea:active {
+    background-color: var(--white);
+    border: 1px solid var(--black);
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="reset"]:active {
+    background-color: var(--green);
+    border: 2px solid var(--white);
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+    font-weight: bold;
+    text-shadow: var(--text-shadow);
+    transition: 0.1s ease;
+}
+
+select {
+    overflow: hidden;
+    padding-right: 2rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+select,
+.checkbox {
+    cursor: pointer;
+}
+
+.contact-check {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.checkbox {
+    margin-left: 1rem;
+    width: auto;
+}
+
+input[type="checkbox"] {
+    height: 1.15rem;
+    margin: 1rem;
+    width: 1.15rem;
+}
+
+.contact-form h1 {
+    padding-top: 8rem;
+}
+
+.form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.submit-button,
+.reset-button {
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+}
+
+input#fName:focus:valid,
+input#phone:focus:valid,
+input#poscode:focus:valid,
+input#email:focus:valid,
+textarea:focus:valid,
+select:focus:valid {
+    background: var(--valid) url(../images/valid.png) 95% 50% no-repeat;
+}
+
+input#fName:focus:invalid,
+input#phone:focus:invalid,
+input#poscode:focus:invalid,
+input#email:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+    background: var(--invalid) url(../images/invalid.png) 95% 50% no-repeat;
+}
+
+select:focus:valid,
+select:focus:invalid {
+    background-position: 90% 50%;
+}
+
+/*-----------------------------------------------------------
+    MEDIA QUERIES
+-----------------------------------------------------------*/
+
+@media (min-width: 48em) {
+    .contact-form {
+        max-width: 45rem;
+    }
+
+    form label {
+        padding-left: 0.25rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    form fieldset {
+        margin: 1rem;
+    }
+
+    form legend {
+        letter-spacing: 0.4rem;
+    }
+
+    select {
+        height: 2.5rem;
+    }
+
+    label {
+        padding-bottom: 0.25rem;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+        height: 2.5rem;
+    }
+
+    .form-field {
+        align-items: center;
+        display: flex;
+    }
+
+    .form-field label {
+        font-size: 1.1rem;
+        font-weight: 500;
+        width: 12rem;
+    }
+
+    input,
+    textarea,
+    select {
+        margin: 0;
+    }
+
+    .form-field,
+    .contact-check {
+        margin: 0.5rem 1rem 1rem;
+    }
+
+    form fieldset#personal-info input[type="text"],
+    form fieldset#personal-info input[type="tel"],
+    form fieldset#personal-info select {
+        width: 24rem;
+    }
+
+    form fieldset#assistance-info .form-field {
+        display: flex;
+        flex-direction: column;
+        width: 36rem;
+    }
+
+    form fieldset#assistance-info .contact-check {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: -1rem;
+        margin-top: -1rem;
+        width: 36rem;
+    }
+
+    form fieldset#assistance-info .form-field label,
+    .contact-check {
+        width: 100%;
+    }
+
+    .submit-button,
+    .reset-button {
+        font-weight: 500;
+        width: 30%;
+    }
+
+    input#fName:focus:valid,
+    input#phone:focus:valid,
+    input#poscode:focus:valid,
+    input#email:focus:valid,
+    input#fName:focus:invalid,
+    input#phone:focus:invalid,
+    input#poscode:focus:invalid,
+    input#email:focus:invalid {
+        background-position: 98% 50%;
+    }
+
+    select:focus:valid,
+    select:focus:invalid {
+        background-position: 94% 50%;
+    }
+
+    textarea:focus:valid,
+    textarea:focus:invalid {
+        background-position: 98% 96%;
+    }
+
+    form ::placeholder {
+        font-size: inherit;
+    }
+}
+
+@media (min-width: 62.5em) {
+    .contact-form {
+        margin: -2rem auto 0;
+    }
+}

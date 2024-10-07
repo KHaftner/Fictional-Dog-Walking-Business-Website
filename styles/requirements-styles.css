@@ -1,0 +1,98 @@
+/************************************************************
+/////////////////////////////////////////////////////////////
+
+COMP 2681, TRU Open Learning
+Final Project
+Dog Walking Business Website
+
+Page: Requirements Page Style Sheet
+Author: Kassandra Haftner
+Last Updated: 7 Oct 2024
+
+A CSS style sheet for the Requirements page styles.
+
+File: requirements-styles.css
+
+/////////////////////////////////////////////////////////////
+************************************************************/
+
+/*-----------------------------------------------------------
+    MAIN STYLES
+-----------------------------------------------------------*/
+
+#nine-websites {
+    scroll-margin-top: 11rem;
+}
+
+.req-page-top-wrapper {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/requirements-page-banner.jpg);
+    background-size: cover;
+    background-position: 50% 45%;
+    background-repeat: no-repeat;
+}
+
+.requirements-list {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.requirements-list h2 {
+    color: var(--purple);
+    font-size: 2rem;
+    text-shadow: var(--nav-text-shadow);
+    border-bottom: 1px solid var(--alternate-dark-green);
+    margin: 0 auto 3rem;
+}
+
+.requirements-list h2:first-of-type {
+    padding-top: 4rem;
+}
+
+.requirements-list ul,
+.requirements-list p {
+    font-size: 1rem;
+    font-family: var(--body);
+    max-width: 45rem;
+    margin: 2rem;
+    line-height: 2rem;
+}
+
+.requirements-list ul:last-of-type {
+    padding-bottom: 4rem;
+    margin-bottom: 0;
+}
+
+.requirements-list nav.websites-list dl a {
+    color: var(--darkish-green);
+    font-size: 1.15rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    text-shadow: var(--nav-text-shadow);
+    transition: all 0.3s ease;
+}
+
+.requirements-list nav.websites-list dl a:hover {
+    text-decoration: underline;
+    color: var(--green);
+}
+
+.requirements-list dd {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.5rem 1rem 2rem 3rem;
+}
+
+/* Temporary Class to Check off Tasks, Remove Later */
+.done {
+    font-weight: 700;
+}
+
+.done::after {
+    content: " ✅";
+}
+
+/*-----------------------------------------------------------
+    MEDIA QUERIES
+-----------------------------------------------------------*/

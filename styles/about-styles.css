@@ -1,0 +1,201 @@
+/************************************************************
+/////////////////////////////////////////////////////////////
+
+COMP 2681, TRU Open Learning
+Final Project
+Dog Walking Business Website
+
+Page: About Us Page Style Sheet
+Author: Kassandra Haftner
+Last Updated: 7 Oct 2024
+
+A CSS style sheet for the About Us page.
+
+File: about-styles.css
+
+/////////////////////////////////////////////////////////////
+************************************************************/
+
+/*-----------------------------------------------------------
+    MAIN STYLES
+-----------------------------------------------------------*/
+
+.about-page-header {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/about-page-banner.jpg);
+    background-size: cover;
+    background-position: 50% 45%;
+    background-repeat: no-repeat;
+}
+
+.staff-photo img {
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 15rem;
+    height: 19rem;
+    object-fit: cover;
+    margin: 2rem auto 1rem;
+}
+
+.meet-the-crew h2 {
+    margin: 0;
+    width: 100%;
+    font-family: var(--body);
+    font-size: 1.25rem;
+    padding: 1rem 0.5rem 0.5rem;
+    font-weight: 300;
+    letter-spacing: 0.5rem;
+    line-height: 2.25rem;
+}
+
+.staff-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--green-grey);
+}
+
+.staff-profile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.staff-profile:nth-of-type(even) {
+    background-color: var(--light-pink);
+}
+
+.staff-text-content {
+    padding: 0.5rem;
+    margin: 0 auto;
+}
+
+.staff-text-content h3 {
+    font-size: 2rem;
+    margin: 0 auto 1rem;
+    width: 18rem;
+    font-family: var(--fancy-heading);
+    color: var(--dark-green);
+    text-align: center;
+    text-shadow: var(--text-shadow);
+    border-bottom: 6px dotted var(--white);
+}
+
+.staff-text-content ul {
+    font-family: var(--body);
+    font-size: 1rem;
+    line-height: 2rem;
+    list-style-type: square;
+    padding: 1rem;
+    margin: 1rem 0.25rem 1rem 1.5rem;
+    text-shadow: var(--nav-text-shadow);
+}
+
+.about-bottom {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../media/staff-page-image.jpg);
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-purple);
+    background-size: cover;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    padding-bottom: 5rem;
+}
+
+.about-bottom p {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    max-width: 80%;
+    letter-spacing: 0.25rem;
+    backdrop-filter: blur(1rem);
+    padding: 2rem;
+    border: 1px solid var(--transparent-black);
+    border-radius: 2rem;
+    font-family: var(--fancy-heading);
+    text-shadow: var(--nav-text-shadow);
+}
+
+/*-----------------------------------------------------------
+    MEDIA QUERIES
+-----------------------------------------------------------*/
+
+@media (min-width: 70em) {
+    .staff-profile {
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .staff-text-content {
+        width: 60%;
+    }
+
+    .staff-profile figure {
+        margin: 0 auto;
+    }
+
+    .staff-profile h3 {
+        text-align: right;
+        padding-left: 1rem;
+        letter-spacing: 0.25rem;
+        width: 25rem;
+    }
+
+    .staff-profile ul {
+        padding-left: 1rem;
+    }
+}
+
+@media (min-width: 90em) {
+    .staff-container {
+        margin: 0.25rem;
+    }
+
+    .staff-profile {
+        width: 50%;
+        height: 35rem;
+    }
+
+    .staff-profile h3 {
+        text-align: left;
+    }
+
+    .staff-profile:nth-of-type(1) {
+        order: 0;
+    }
+
+    .staff-profile:nth-of-type(2) {
+        order: 1;
+        flex-direction: row-reverse;
+    }
+
+    .staff-profile:nth-of-type(3) {
+        order: 3;
+        flex-direction: row-reverse;
+    }
+
+    .staff-profile:nth-of-type(4) {
+        order: 2;
+    }
+
+    .staff-profile:nth-of-type(5) {
+        order: 4;
+    }
+
+    .staff-profile:nth-of-type(6) {
+        order: 5;
+        flex-direction: row-reverse;
+    }
+
+    .staff-profile {
+        border: 6px solid var(--white);
+    }
+}
