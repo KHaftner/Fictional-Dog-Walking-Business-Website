@@ -167,98 +167,97 @@ File: contact.html
     </header>
 
     <main>
-        <div class="other-top-wrapper contact-top-wrapper">
+        <header class="other-top-wrapper contact-page-header">
             <h1>Contact Us</h1>
-            <section class="contact-form">
-                <h1>Contact Me</h1>
-                <p>Let's get in touch! Fill out the form below. &#128522;</p>
-                <p class="required-fields"><strong>*</strong> Required Fields</p>
-                <form name="cOrder" id="cOrder" class="contact-form" action="#" method="post">
-                    <fieldset id="personal-info">
-                        <legend>Personal Information</legend>
-                        <div class="form-field">
-                            <label for="fName">First Name <strong>*</strong></label>
-                            <input name="fName" id="fName" type="text" placeholder="Enter your first name here..."
-                                required />
-                        </div>
-                        <div class="form-field">
-                            <label for="lName">Last Name</label>
-                            <input name="lName" id="lName" type="text" placeholder="Enter your last name here..." />
-                        </div>
-                        <div class="form-field">
-                            <label for="street">Street Address</label>
-                            <input name="street" id="street" type="text" placeholder="Enter your address here..." />
-                        </div>
-                        <div class="form-field">
-                            <label for="city">City</label>
-                            <input name="city" id="city" type="text" placeholder="Enter your city here..." />
-                        </div>
-                        <div class="form-field">
-                            <label for="province">Province</label>
-                            <input name="province" id="province" type="text" placeholder="Enter your province here..."
-                                value="British Columbia" />
-                        </div>
-                        <div class="form-field">
-                            <label for="poscode">Postal Code <strong>*</strong></label>
-                            <input name="poscode" id="poscode" type="text"
-                                pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" maxlength="7" required
-                                placeholder="Please use format 'A1B 2C3' ..." />
-                        </div>
-                        <div class="form-field">
-                            <label for="phone">Phone Number <strong>*</strong></label>
-                            <input name="phone" id="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                autocomplete="on" maxlength="12" required
-                                placeholder="Please use format '123-456-7890' ..." />
-                        </div>
-                        <div class="form-field">
-                            <label for="occupation">Current Occupation <strong>*</strong></label>
-                            <select name="occupation" id="occupation" required>
-                                <option value="" disabled selected hidden>Select your occupation...</option>
-                                <option value="student">Student</option>
-                                <option value="nurse">Nurse</option>
-                                <option value="firefighter">Firefighter</option>
-                                <option value="dancer-performer">Dancer/Performer</option>
-                                <option value="parent">Stay-at-Home Parent</option>
-                                <option value="software-developer">Software Developer</option>
-                                <option value="instructor">Instructor</option>
-                                <option value="neet">NEET</option>
-                                <option value="accountant">Accountant</option>
-                                <option value="rich-billionaire-ceo">Rich Billionaire CEO</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    </fieldset>
-                    <fieldset id="assistance-info">
-                        <legend>Additional Information</legend>
-                        <div class="form-field">
-                            <label for="reason">What is your reason for contacting us? <strong>*</strong></label>
-                            <select name="reason" id="reason" required>
-                                <option value="" disabled selected hidden>Select your reason for contacting us...
-                                </option>
-                                <option value="help">I need help with something.</option>
-                                <option value="comments">I have comments about the website.</option>
-                                <option value="contribution">I want to contribute to the website.</option>
-                                <option value="other">Other - Please specify details below.</option>
-                            </select>
-                        </div>
-                        <div class="form-field">
-                            <label for="message">Additional Information & Comments <strong>*</strong></label>
-                            <textarea name="message" id="message" rows="10" cols="40"
-                                placeholder="Please explain the details of your comment and/or request here..."
-                                required></textarea>
-                        </div>
-                        <div class="contact-check">
-                            <label for="contact-me">Contact Me</label>
-                            <input name="contact-me" id="contact-me" value="yes" type="checkbox" class="checkbox" />
-                        </div>
-                    </fieldset>
-                    <fieldset id="form-buttons" class="form-buttons">
-                        <input value="Submit Details" type="submit" class="submit-button" />
-                        <input value="Cancel Details" type="reset" class="reset-button" />
-                    </fieldset>
-                </form>
-            </section>
-        </div>
+        </header>
+        <section class="contact-form">
+            <p>You may contact us using the form below to set up a meet and greet with us We will get back to you within
+                one business day. &#128522;</p>
+            <p class="required-fields"><strong>*</strong> Required Fields</p>
+            <form name="cOrder" id="cOrder" class="contact-form" action="#" method="post">
+                <fieldset id="personal-info">
+                    <legend>Personal Information</legend>
+                    <div class="form-field">
+                        <label for="fName">First Name <strong>*</strong></label>
+                        <input name="fName" id="fName" type="text" placeholder="Enter your first name here..."
+                            required />
+                    </div>
+                    <div class="form-field">
+                        <label for="lName">Last Name</label>
+                        <input name="lName" id="lName" type="text" placeholder="Enter your last name here..." />
+                    </div>
+                    <div class="form-field">
+                        <label for="street">Street Address</label>
+                        <input name="street" id="street" type="text" placeholder="Enter your address here..." />
+                    </div>
+                    <div class="form-field">
+                        <label for="city">City</label>
+                        <input name="city" id="city" type="text" placeholder="Enter your city here..." />
+                    </div>
+                    <div class="form-field">
+                        <label for="province">Province</label>
+                        <input name="province" id="province" type="text" placeholder="Enter your province here..."
+                            value="British Columbia" />
+                    </div>
+                    <div class="form-field">
+                        <label for="poscode">Postal Code <strong>*</strong></label>
+                        <input name="poscode" id="poscode" type="text"
+                            pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" maxlength="7" required
+                            placeholder="Please use format 'A1B 2C3' ..." />
+                    </div>
+                    <div class="form-field">
+                        <label for="phone">Phone Number <strong>*</strong></label>
+                        <input name="phone" id="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="on"
+                            maxlength="12" required placeholder="Please use format '123-456-7890' ..." />
+                    </div>
+                    <div class="form-field">
+                        <label for="occupation">Current Occupation <strong>*</strong></label>
+                        <select name="occupation" id="occupation" required>
+                            <option value="" disabled selected hidden>Select your occupation...</option>
+                            <option value="student">Student</option>
+                            <option value="nurse">Nurse</option>
+                            <option value="firefighter">Firefighter</option>
+                            <option value="dancer-performer">Dancer/Performer</option>
+                            <option value="parent">Stay-at-Home Parent</option>
+                            <option value="software-developer">Software Developer</option>
+                            <option value="instructor">Instructor</option>
+                            <option value="neet">NEET</option>
+                            <option value="accountant">Accountant</option>
+                            <option value="rich-billionaire-ceo">Rich Billionaire CEO</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset id="assistance-info">
+                    <legend>Additional Information</legend>
+                    <div class="form-field">
+                        <label for="reason">What is your reason for contacting us? <strong>*</strong></label>
+                        <select name="reason" id="reason" required>
+                            <option value="" disabled selected hidden>Select your reason for contacting us...
+                            </option>
+                            <option value="help">I need help with something.</option>
+                            <option value="comments">I have comments about the website.</option>
+                            <option value="contribution">I want to contribute to the website.</option>
+                            <option value="other">Other - Please specify details below.</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Additional Information & Comments <strong>*</strong></label>
+                        <textarea name="message" id="message" rows="10" cols="40"
+                            placeholder="Please explain the details of your comment and/or request here..."
+                            required></textarea>
+                    </div>
+                    <div class="contact-check">
+                        <label for="contact-me">Contact Me</label>
+                        <input name="contact-me" id="contact-me" value="yes" type="checkbox" class="checkbox" />
+                    </div>
+                </fieldset>
+                <fieldset id="form-buttons" class="form-buttons">
+                    <input value="Submit Details" type="submit" class="submit-button" />
+                    <input value="Cancel Details" type="reset" class="reset-button" />
+                </fieldset>
+            </form>
+        </section>
     </main>
 
     <!-- Footer Content -->
