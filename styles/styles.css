@@ -232,7 +232,7 @@ ul.nav-list {
 
 .logo p {
     font-family: var(--heading);
-    color: black;
+    color: var(--black);
     font-size: 1.25rem;
     width: 82%;
     padding-top: 0.75rem;
@@ -259,6 +259,7 @@ button.close-menu {
     border-radius: 0.5rem;
     padding: 0.5rem;
     margin: 1rem;
+    display: none;
 }
 
 button.close-menu {
@@ -277,7 +278,7 @@ button.close-menu {
     width: 1.25rem;
 }
 
-.nav-list.menu-clicked {
+#nav-list.menu-clicked {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -287,10 +288,10 @@ button.close-menu {
     visibility: visible;
 }
 
-.nav-list.menu-closing {
+#nav-list.menu-closing {
     opacity: 0;
     right: -100%;
-    transition: none;
+    transition: right 0.5s ease-out, opacity 0.5s ease-out;
     visibility: hidden;
 }
 
@@ -975,7 +976,7 @@ button.close-menu {
     MEDIA QUERIES
 -----------------------------------------------------------*/
 
-@media (min-width: 66em) {
+@media (min-width: 70em) {
     /* Index Page */
 
     .index-top-content {
@@ -1052,7 +1053,7 @@ button.close-menu {
 
     /* Navigation Bar */
 
-    button.menu-button {
+    .main-nav button.menu-button {
         display: none;
     }
 
@@ -1170,6 +1171,17 @@ button.close-menu {
     .scrolled {
         top: -5.1rem;
         transition: all 0.6s ease-out;
+    }
+
+    .main-nav button.menu-button {
+        display: none;
+    }
+    .nav-list {
+        display: flex;
+        position: relative;
+        right: 0;
+        visibility: visible;
+        opacity: 1;
     }
 
     /* About Page */
