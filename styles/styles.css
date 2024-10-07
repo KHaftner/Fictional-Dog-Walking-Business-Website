@@ -244,7 +244,6 @@ ul.nav-list {
     font-style: italic;
     font-weight: 900;
     font-size: 1.05rem;
-    padding-right: 0.25rem;
 }
 
 .logo p span:last-of-type {
@@ -348,7 +347,7 @@ button.close-menu {
     letter-spacing: 0.05rem;
     padding-bottom: 0.5rem;
     margin: 0 auto;
-    margin-top: -1rem;
+    margin-top: 1rem;
     max-width: 60rem;
     text-shadow: var(--nav-text-shadow);
 }
@@ -361,6 +360,16 @@ button.close-menu {
 
 .introduction-content .introduction-paragraph p:last-of-type {
     margin: 1rem auto 12rem;
+}
+
+#index-main .introduction-content p::first-letter {
+    color: var(--dark-dusty-pink);
+    font-family: var(--fancy-heading);
+    float: left;
+    font-size: 4.5rem;
+    line-height: 3rem;
+    padding: 0 0.5rem 0 0;
+    text-shadow: var(--heading-text-shadow);
 }
 
 .shape-divider,
