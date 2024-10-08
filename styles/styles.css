@@ -73,6 +73,7 @@ File: styles.css
     --heading-text-shadow: 2px 2px 1px #4d4d4d;
     --nav-text-shadow: 0px 1px 1px #808080c9;
     --text-shadow: 1px 1px 1px #4d4d4d;
+    --light-text-shadow: 1px 1px 2px #ffffffa2;
 
     /* Transparent Backgrounds */
     --transparent-green: #8bd5ae49;

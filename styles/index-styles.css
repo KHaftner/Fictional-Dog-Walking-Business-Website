@@ -194,7 +194,7 @@ File: index-styles.css
     border: 1px solid var(--transparent-black);
     border-radius: 2rem;
     font-family: var(--fancy-heading);
-    text-shadow: var(--nav-text-shadow);
+    text-shadow: var(--light-text-shadow);
 }
 
 /*-----------------------------------------------------------

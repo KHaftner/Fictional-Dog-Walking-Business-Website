@@ -49,6 +49,7 @@ File: services-styles.css
     border-bottom: 8px dotted var(--white);
     padding: 2rem 1rem 0;
     margin: 0 auto 1rem;
+    text-shadow: var(--nav-text-shadow);
 }
 
 .our-services figure {
@@ -113,7 +114,7 @@ File: services-styles.css
     border: 1px solid var(--transparent-black);
     border-radius: 2rem;
     font-family: var(--fancy-heading);
-    text-shadow: var(--nav-text-shadow);
+    text-shadow: var(--light-text-shadow);
 }
 
 /*-----------------------------------------------------------
