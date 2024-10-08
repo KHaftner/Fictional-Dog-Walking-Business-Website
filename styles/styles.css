@@ -63,7 +63,7 @@ File: styles.css
     --pink: #f8c5cd;
     --pink: hsl(351, 78%, 87%);
     --light-pink: #fce8eb;
-    --light-pink: hsl(351, 77%, 95%);
+    --light-pink: hsl(0, 100%, 95%);
     --white: #ffffff;
     --white: hsl(0, 0%, 100%);
 
@@ -182,7 +182,7 @@ dd {
     top: 0;
     z-index: 5;
     font-weight: 900;
-    transition-duration: 0s;
+    transition: 0.4s ease-out;
 }
 
 ul.nav-list {

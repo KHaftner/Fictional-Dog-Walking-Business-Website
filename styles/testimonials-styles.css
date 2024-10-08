@@ -22,6 +22,10 @@ File: testimonials-styles.css
 
 .testimonials-page-header {
     background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/testimonials-page-banner.jpg);
+    background-size: cover;
+    background-position: 50% 35%;
     background-repeat: no-repeat;
 }
 
@@ -63,17 +67,6 @@ blockquote {
     background-color: var(--transparent-white);
     padding: 1rem;
     border-radius: 0.5rem;
-}
-
-.audio-container {
-    align-items: center;
-    background-color: var(--transparent-white-2);
-    border-bottom: 2px dotted var(--medium-pink);
-    border-top: 2px dotted var(--medium-pink);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 1rem;
 }
 
 /*-----------------------------------------------------------

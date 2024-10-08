@@ -21,7 +21,7 @@ File: index-styles.css
 -----------------------------------------------------------*/
 
 .index-top-content {
-    align-items: flex-start;
+    align-items: center;
     background: url(../media/home-top-banner.jpg);
     background-blend-mode: soft-light;
     background-color: var(--transparent-pink);
@@ -30,21 +30,20 @@ File: index-styles.css
     background-size: cover;
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
-    min-height: 60vh;
+    min-height: 65vh;
     position: relative;
 }
 
 .index-top-content .page-header {
     backdrop-filter: blur(5px);
     padding: 1rem 0.5rem;
-    margin: 4rem 1rem 1rem;
+    margin: 2rem 1rem;
     border-radius: 0.5rem;
     background-color: #00000044;
 }
 
 .index-top-content .page-header h1 {
-    color: var(--light-pink);
+    color: var(--light-purple);
     text-shadow: var(--text-shadow);
     font-size: clamp(1.5rem, 3vw, 3rem);
     display: inline;
@@ -62,7 +61,7 @@ File: index-styles.css
 }
 
 .introduction-content .introduction-paragraph h2 {
-    border-bottom: 4px dotted var(--white);
+    border-bottom: 8px dotted var(--white);
     color: var(--dark-green);
     font-family: var(--fancy-heading);
     font-size: clamp(1.5rem, 3vw, 3rem);
@@ -206,13 +205,12 @@ File: index-styles.css
     .index-top-content {
         align-items: center;
         background-position: 50% 70%;
-        min-height: 70vh;
+        min-height: 80vh;
     }
 
     .index-top-content .page-header {
-        margin: -2rem auto 0;
+        margin: 0 auto;
         padding: 1.5rem 2rem;
-        border: 1px solid var(--light-pink);
     }
 
     .introduction-content .introduction-paragraph h2 {
@@ -226,11 +224,6 @@ File: index-styles.css
 
     .other-top-wrapper h1 {
         padding: 0.5rem;
-    }
-
-    .index-top-content,
-    .other-top-wrapper {
-        margin-top: 10.5rem;
     }
 
     .service-preview-container {
