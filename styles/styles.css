@@ -82,6 +82,7 @@ File: styles.css
     --transparent-dark-purple: #45216348;
     --transparent-white: #ffffff69;
     --transparent-white2: #ffffffe3;
+    --transparent-white3: #ffffffb4;
     --transparent-black: #1c1c1c3c;
 
     /* Font Styles */
@@ -186,8 +187,6 @@ dd {
 
 ul.nav-list {
     background-color: var(--light-purple);
-    border-top: 1px solid var(--darkest-green);
-    border-bottom: 1px solid var(--darkest-green);
     font-size: 1.25rem;
     list-style: none;
     padding: 0;
@@ -451,7 +450,6 @@ button.close-menu {
 
 .other-top-wrapper h1 {
     color: var(--white);
-    border-top: 1px solid var(--transparent-white);
     text-shadow: var(--text-shadow);
     font-size: clamp(2.5rem, 4vw, 4rem);
     backdrop-filter: blur(4px) saturate(200%);

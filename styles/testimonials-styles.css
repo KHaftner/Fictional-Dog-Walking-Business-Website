@@ -20,13 +20,60 @@ File: testimonials-styles.css
     MAIN STYLES
 -----------------------------------------------------------*/
 
-.blog-top-wrapper {
+.testimonials-page-header {
     background-blend-mode: soft-light;
-    background-color: var(--transparent-pink);
-    background-image: url(../media/blog-page-banner.jpg);
-    background-size: cover;
-    background-position: 50% 55%;
     background-repeat: no-repeat;
+}
+
+.testimonials-page-header h1 {
+    margin-top: 5rem;
+}
+
+.testimonials-page-header video {
+    height: 60%;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.65;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.client-testimonials {
+    font-family: var(--body);
+    background-color: var(--light-pink);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    margin: 2rem auto;
+    max-width: 120rem;
+    padding: 2rem 1rem;
+    border: 4px dotted var(--white);
+}
+
+.individual-testimonial img {
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+blockquote {
+    margin-top: 1rem;
+    max-width: 20rem;
+    background-color: var(--transparent-white);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.audio-container {
+    align-items: center;
+    background-color: var(--transparent-white-2);
+    border-bottom: 2px dotted var(--medium-pink);
+    border-top: 2px dotted var(--medium-pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 1rem;
 }
 
 /*-----------------------------------------------------------

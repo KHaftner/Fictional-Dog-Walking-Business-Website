@@ -23,21 +23,32 @@ File: contact.html
 /////////////////////////////////////////////////////////////
         -->
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Puppers on Patrol is a dog-walking business that also offers pet-sitting services, serving clients in Port Moody and Coquitlam.">
+    <meta name="keywords"
+        content="Dogs, Walking, Boarding, Service, Pet-Sitting, Affordable, Convenient, Port Moody, Coquitlam">
+    <meta name="author" content="Puppers on Patrol">
+    <meta name="designer" content="Kassandra Haftner">
+    <meta name="revised" content="October 8, 2024">
+    <meta name="robots" content="index, follow">
 
+    <!-- Page's Title -->
     <title>Puppers on Patrol - Contact Us</title>
 
-    <link href="styles/reset_styles.css" rel="stylesheet" />
-    <link href="styles/styles.css" rel="stylesheet" />
-    <link href="styles/contact-styles.css" rel="stylesheet" />
+    <!-- CSS Style Sheets -->
+    <link href="styles/reset-styles.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/contact-styles.css" rel="stylesheet">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=Alice&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -156,8 +167,8 @@ File: contact.html
                 </li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li class="dropdown"><a href="requirements.html">Project Requirements</a>
                     <ul class="dropdown-content">
                         <li><a href="requirements.html#nine-websites">Nine Websites</a></li>
@@ -168,70 +179,68 @@ File: contact.html
         </nav>
     </header>
 
-    <main>
+    <main class="contact-main">
         <header class="other-top-wrapper contact-page-header">
             <h1>Contact Us</h1>
         </header>
         <section class="contact-form">
-            <p>You may contact us using the form below to set up a meet and greet with us We will get back to you within
-                one business day. &#128522;</p>
-            <p class="required-fields"><strong>*</strong> Required Fields</p>
-            <form name="cOrder" id="cOrder" class="contact-form" action="#" method="post">
+            <p>You may contact us to request an appointment by using the form below. We do not accept bookings this way,
+                but we will get back to you within one business day of your form request. Please note that first time
+                clients will need to have a meet & greet with us first, free of charge. &#128522;</p>
+            <p class="required-fields"><strong>Note</strong>: All of the fields are required, so make sure to fill out
+                them all!</p>
+            <form name="contact-us" id="contact-us" class="contact-us" action="#" method="post">
                 <fieldset id="personal-info">
-                    <legend>Personal Information</legend>
+                    <legend>Your Information</legend>
                     <div class="form-field">
-                        <label for="fName">First Name <strong>*</strong></label>
-                        <input name="fName" id="fName" type="text" placeholder="Enter your first name here..."
+                        <label for="yourName">Your Name</label>
+                        <input name="yourName" id="yourName" type="text" placeholder="Enter your name here..."
                             required />
                     </div>
                     <div class="form-field">
-                        <label for="lName">Last Name</label>
-                        <input name="lName" id="lName" type="text" placeholder="Enter your last name here..." />
-                    </div>
-                    <div class="form-field">
-                        <label for="street">Street Address</label>
-                        <input name="street" id="street" type="text" placeholder="Enter your address here..." />
+                        <label for="dogName">Dog's Name</label>
+                        <input name="dogName" id="dogName" type="text" placeholder="Enter your dog's name here..."
+                            required />
                     </div>
                     <div class="form-field">
                         <label for="city">City</label>
-                        <input name="city" id="city" type="text" placeholder="Enter your city here..." />
+                        <input name="city" id="city" type="text" placeholder="Enter your city here..." required />
                     </div>
                     <div class="form-field">
-                        <label for="province">Province</label>
-                        <input name="province" id="province" type="text" placeholder="Enter your province here..."
-                            value="British Columbia" />
+                        <label for="breed">Breed of Dog</label>
+                        <input name="breed" id="breed" type="text" placeholder="Enter your dog's breed here..."
+                            required />
                     </div>
                     <div class="form-field">
-                        <label for="poscode">Postal Code <strong>*</strong></label>
-                        <input name="poscode" id="poscode" type="text"
-                            pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" maxlength="7" required
-                            placeholder="Please use format 'A1B 2C3' ..." />
-                    </div>
-                    <div class="form-field">
-                        <label for="phone">Phone Number <strong>*</strong></label>
+                        <label for="phone">Phone Number</label>
                         <input name="phone" id="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="on"
                             maxlength="12" required placeholder="Please use format '123-456-7890' ..." />
                     </div>
                     <div class="form-field">
-                        <label for="occupation">Current Occupation <strong>*</strong></label>
-                        <select name="occupation" id="occupation" required>
-                            <option value="" disabled selected hidden>Select your occupation...</option>
-                            <option value="student">Student</option>
-                            <option value="nurse">Nurse</option>
-                            <option value="firefighter">Firefighter</option>
-                            <option value="dancer-performer">Dancer/Performer</option>
-                            <option value="parent">Stay-at-Home Parent</option>
-                            <option value="software-developer">Software Developer</option>
-                            <option value="instructor">Instructor</option>
-                            <option value="neet">NEET</option>
-                            <option value="accountant">Accountant</option>
-                            <option value="rich-billionaire-ceo">Rich Billionaire CEO</option>
-                            <option value="other">Other</option>
+                        <label for="dogAge">Your Dog's Age</label>
+                        <select name="dogAge" id="dogAge" required>
+                            <option value="" disabled selected hidden>Select your dog's age...</option>
+                            <option value="under-one">Under 1 Year Old</option>
+                            <option value="one-to-two">1 - 2 Years Old</option>
+                            <option value="three-to-six">3 - 6 Years Old</option>
+                            <option value="seven-to-ten">7 - 10 Years Old</option>
+                            <option value="eleven-to-thirteen">11 - 13 Years Old</option>
+                            <option value="fourteen-and-over">Over 14 Years Old</option>
                         </select>
                     </div>
                 </fieldset>
-                <fieldset id="assistance-info">
-                    <legend>Additional Information</legend>
+                <fieldset id="request-info">
+                    <legend>Request Information</legend>
+                    <div class="form-field">
+                        <label for="serviceInterest">Which type of service are you interested in booking?</label>
+                        <select name="serviceInterest" id="serviceInterest" required>
+                            <option value="" disabled selected hidden>Select your desired service...</option>
+                            <option value="dogWalking">Dog Walking</option>
+                            <option value="dogSitting">Day Care Dog-Sitting</option>
+                            <option value="dogBoarding">Overnight Dog Boarding</option>
+                            <option value="dogOther">Other (Specify Below)</option>
+                        </select>
+                    </div>
                     <div class="form-field">
                         <label for="reason">What is your reason for contacting us? <strong>*</strong></label>
                         <select name="reason" id="reason" required>
@@ -244,14 +253,14 @@ File: contact.html
                         </select>
                     </div>
                     <div class="form-field">
-                        <label for="message">Additional Information & Comments <strong>*</strong></label>
-                        <textarea name="message" id="message" rows="10" cols="40"
-                            placeholder="Please explain the details of your comment and/or request here..."
-                            required></textarea>
+                        <label for="desiredDate">Desired Date of Booking</label>
+                        <input type="date" id="desiredDate" name="desiredDate" required />
                     </div>
-                    <div class="contact-check">
-                        <label for="contact-me">Contact Me</label>
-                        <input name="contact-me" id="contact-me" value="yes" type="checkbox" class="checkbox" />
+                    <div class="form-field">
+                        <label for="message">Additional Information & Comments</label>
+                        <textarea name="message" id="message" rows="10" cols="40"
+                            placeholder="Please explain some more details about your request here..."
+                            required></textarea>
                     </div>
                 </fieldset>
                 <fieldset id="form-buttons" class="form-buttons">
@@ -318,6 +327,7 @@ File: contact.html
         </nav>
         <p>&#169; <span id="current-year">(current year)</span> Puppers on Patrol</p>
         <p>This is a fictional website created for educational purposes.</p>
+        <p><strong>Last Updated</strong>: <span id="revision-date">(Revision Date)</span></p>
     </footer>
     <script src="scripts/menu.js"></script>
     <script src="scripts/scripts.js"></script>

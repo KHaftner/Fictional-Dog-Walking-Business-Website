@@ -1,0 +1,30 @@
+/************************************************************
+/////////////////////////////////////////////////////////////
+
+COMP 2681, TRU Open Learning
+Final Project
+Dog Walking Business Website
+
+Page: Gallery Page Style Sheet
+Author: Kassandra Haftner
+Last Updated: 8 Oct 2024
+
+A CSS style sheet for the Gallery page.
+
+File: gallery-styles.css
+
+/////////////////////////////////////////////////////////////
+************************************************************/
+
+/*-----------------------------------------------------------
+    GALLERY PAGE STYLES
+-----------------------------------------------------------*/
+
+.gallery-page-header {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-pink);
+    background-image: url(../media/gallery-page-banner.jpg);
+    background-size: cover;
+    background-position: 30% 40%;
+    background-repeat: no-repeat;
+}

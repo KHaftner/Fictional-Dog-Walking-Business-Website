@@ -124,7 +124,6 @@ table {
     border-top: 4px dotted var(--lightish-green);
     margin: 1rem auto 0;
     padding-bottom: 2rem;
-    border-bottom: 4px dotted var(--lightish-green);
 }
 
 .prices p {
@@ -138,6 +137,7 @@ table {
 }
 
 .indiv-service-bottom {
+    border-top: 4px dotted var(--lightish-green);
     min-height: max(40rem, 50vh);
     display: flex;
     align-items: center;
@@ -147,6 +147,8 @@ table {
     background-blend-mode: soft-light;
     background-color: var(--transparent-purple);
     background-size: cover;
+    background-clip: padding-box;
+    background-origin: padding-box;
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }

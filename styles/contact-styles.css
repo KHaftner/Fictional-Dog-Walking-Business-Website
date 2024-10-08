@@ -20,35 +20,45 @@ File: contact-styles.css
     CONTACT PAGE STYLES
 -----------------------------------------------------------*/
 
+.contact-main {
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-white3);
+    background-image: url(../media/contact-page-wallpaper.jpg);
+    background-size: cover;
+    background-position: 70% 50%;
+    background-repeat: no-repeat;
+    padding-bottom: 2rem;
+}
+
 .contact-page-header {
     background-blend-mode: soft-light;
     background-color: var(--transparent-pink);
     background-image: url(../media/contact-page-banner.jpg);
     background-size: cover;
-    background-position: 50% 72%;
+    background-position: 30% 72%;
     background-repeat: no-repeat;
 }
 
 .contact-form {
-    padding-top: 2rem;
-    margin: 0 auto;
-    max-width: 98%;
+    padding-top: 1rem;
+    margin: 0 auto 5rem;
+    max-width: 95%;
 }
 
 .contact-form p {
-    font-weight: 600;
-    padding: 0.5rem;
-    text-align: center;
+    line-height: 2rem;
+    padding: 0 0.5rem;
 }
 
 .contact-form p.required-fields {
     font-weight: 400;
     font-size: 0.9rem;
+    line-height: 1.25rem;
     margin-top: -1rem auto 2rem;
 }
 
 form {
-    background-color: var(--transparent-purple);
+    background-color: var(--transparent-dark-green);
     border: 1px solid var(--black);
     border-radius: 1rem;
     font-family: var(--body);
@@ -64,8 +74,8 @@ form legend {
 }
 
 form fieldset {
-    border: 3px dashed var(--transparent-white);
-    border-radius: 0.5rem;
+    border: 2px dotted var(--transparent-white2);
+    border-radius: 0.25rem;
     margin: 0 auto;
     padding: 1rem;
 }
@@ -74,7 +84,7 @@ form fieldset:last-of-type {
     border: none;
 }
 
-form fieldset#assistance-info {
+form fieldset#request-info {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -86,9 +96,24 @@ form ::placeholder {
     font-style: italic;
 }
 
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"] {
+    background-color: var(--transparent-white);
+    border-radius: 0.25rem;
+    height: 2rem;
+}
+
 input,
 textarea,
-select {
+select,
+input[type="date"] {
     border: 1px solid var(--black);
     box-sizing: border-box;
     margin-bottom: 1rem;
@@ -100,7 +125,7 @@ select {
 select,
 textarea {
     background-color: var(--transparent-white);
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
 }
 
 select {
@@ -108,19 +133,11 @@ select {
     padding-left: 0.5rem;
 }
 
-input[type="text"],
-input[type="tel"],
-input[type="email"] {
-    background-color: var(--transparent-white);
-    border-radius: 0.5rem;
-    height: 2rem;
-}
-
 input[type="submit"],
 input[type="reset"] {
-    background-color: var(--light-pink);
+    background-color: var(--lightest-green);
     border: 1px solid var(--black);
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     height: 2.75rem;
     margin: 0.5rem;
     padding: 0 1rem;
@@ -129,16 +146,19 @@ input[type="reset"] {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
+input[type="date"]:focus,
 select:focus,
 textarea:focus,
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="tel"]:hover,
+input[type="date"]:hover,
 select:hover,
 textarea:hover,
 input[type="text"]:active,
 input[type="email"]:active,
 input[type="tel"]:active,
+input[type="date"]:active,
 select:active,
 textarea:active {
     background-color: var(--white);
@@ -165,32 +185,7 @@ select {
     padding-right: 2rem;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-select,
-.checkbox {
     cursor: pointer;
-}
-
-.contact-check {
-    align-items: center;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.checkbox {
-    margin-left: 1rem;
-    width: auto;
-}
-
-input[type="checkbox"] {
-    height: 1.15rem;
-    margin: 1rem;
-    width: 1.15rem;
-}
-
-.contact-form h1 {
-    padding-top: 8rem;
 }
 
 .form-buttons {
@@ -208,24 +203,20 @@ textarea {
     resize: none;
 }
 
-input#fName:focus:valid,
-input#phone:focus:valid,
-input#poscode:focus:valid,
-input#email:focus:valid,
+input:focus:valid,
 textarea:focus:valid,
 select:focus:valid {
-    background: var(--valid) url(../images/valid.png) 95% 50% no-repeat;
+    background: var(--valid) url(../media/valid.png) 95% 50% no-repeat;
 }
 
-input#fName:focus:invalid,
-input#phone:focus:invalid,
-input#poscode:focus:invalid,
-input#email:focus:invalid,
+input:focus:invalid,
 textarea:focus:invalid,
 select:focus:invalid {
-    background: var(--invalid) url(../images/invalid.png) 95% 50% no-repeat;
+    background: var(--invalid) url(../media/invalid.png) 95% 50% no-repeat;
 }
 
+input#desiredDate:valid,
+input#desiredDate:invalid,
 select:focus:valid,
 select:focus:invalid {
     background-position: 90% 50%;
@@ -265,8 +256,7 @@ select:focus:invalid {
     }
 
     input[type="text"],
-    input[type="tel"],
-    input[type="email"] {
+    input[type="tel"] {
         height: 2.5rem;
     }
 
@@ -287,8 +277,7 @@ select:focus:invalid {
         margin: 0;
     }
 
-    .form-field,
-    .contact-check {
+    .form-field {
         margin: 0.5rem 1rem 1rem;
     }
 
@@ -298,21 +287,13 @@ select:focus:invalid {
         width: 24rem;
     }
 
-    form fieldset#assistance-info .form-field {
+    form fieldset#request-info .form-field {
         display: flex;
         flex-direction: column;
         width: 36rem;
     }
 
-    form fieldset#assistance-info .contact-check {
-        font-size: 1.1rem;
-        font-weight: 500;
-        margin-bottom: -1rem;
-        margin-top: -1rem;
-        width: 36rem;
-    }
-
-    form fieldset#assistance-info .form-field label,
+    form fieldset#request-info .form-field label,
     .contact-check {
         width: 100%;
     }
@@ -323,19 +304,19 @@ select:focus:invalid {
         width: 30%;
     }
 
-    input#fName:focus:valid,
-    input#phone:focus:valid,
-    input#poscode:focus:valid,
-    input#email:focus:valid,
-    input#fName:focus:invalid,
-    input#phone:focus:invalid,
-    input#poscode:focus:invalid,
-    input#email:focus:invalid {
+    input:focus:valid,
+    textarea:focus:valid,
+    select:focus:valid,
+    input:focus:invalid,
+    textarea:focus:invalid,
+    select:focus:invalid {
         background-position: 98% 50%;
     }
 
     select:focus:valid,
-    select:focus:invalid {
+    select:focus:invalid,
+    input#desiredDate:valid,
+    input#desiredDate:invalid {
         background-position: 94% 50%;
     }
 
@@ -346,11 +327,5 @@ select:focus:invalid {
 
     form ::placeholder {
         font-size: inherit;
-    }
-}
-
-@media (min-width: 62.5em) {
-    .contact-form {
-        margin: -2rem auto 0;
     }
 }
