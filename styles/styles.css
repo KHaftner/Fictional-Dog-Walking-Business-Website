@@ -56,6 +56,8 @@ File: styles.css
     --lighter-purple: hsl(273, 16%, 63%);
     --light-purple: #f3e6f4;
     --light-purple: hsl(297, 39%, 93%);
+    --lightest-purple: #f5eaf5;
+    --lightest-purple: hsl(300, 34%, 94%);
     --dusty-pink: #e8c0b8;
     --dusty-pink: hsl(10, 51%, 82%);
     --dark-dusty-pink: #deb1a8;

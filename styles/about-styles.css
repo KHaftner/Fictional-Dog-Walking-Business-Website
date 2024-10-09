@@ -20,6 +20,10 @@ File: about-styles.css
     MAIN STYLES
 -----------------------------------------------------------*/
 
+.about-main {
+    background-color: var(--light-green);
+}
+
 .about-page-header {
     background-blend-mode: soft-light;
     background-color: var(--transparent-pink);
@@ -42,11 +46,14 @@ File: about-styles.css
     margin: 0;
     width: 100%;
     font-family: var(--body);
+    color: var(--black);
     font-size: 1.25rem;
     padding: 1rem 0.5rem 0.5rem;
     font-weight: 300;
     letter-spacing: 0.5rem;
     line-height: 2.25rem;
+    background-color: var(--light-green);
+    text-shadow: var(--nav-text-shadow);
 }
 
 .staff-container {
@@ -77,10 +84,10 @@ File: about-styles.css
     font-size: 2rem;
     margin: 0 auto 1rem;
     width: 18rem;
-    font-family: var(--fancy-heading);
+    font-family: var(--heading);
     color: var(--dark-green);
     text-align: center;
-    text-shadow: var(--text-shadow);
+    text-shadow: var(--nav-text-shadow);
     border-bottom: 6px dotted var(--white);
 }
 
@@ -166,6 +173,7 @@ File: about-styles.css
 
     .staff-profile h3 {
         text-align: left;
+        padding-left: 0;
     }
 
     .staff-profile:nth-of-type(1) {
@@ -196,6 +204,6 @@ File: about-styles.css
     }
 
     .staff-profile {
-        border: 6px solid var(--white);
+        border: 6px solid var(--light-green);
     }
 }
