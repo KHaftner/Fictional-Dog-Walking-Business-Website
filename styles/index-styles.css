@@ -214,7 +214,7 @@ File: index-styles.css
     }
 
     .introduction-content .introduction-paragraph h2 {
-        padding-top: 2rem;
+        padding-top: 0;
         letter-spacing: 0.25rem;
     }
 

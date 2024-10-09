@@ -28,3 +28,9 @@ File: gallery-styles.css
     background-position: 30% 40%;
     background-repeat: no-repeat;
 }
+
+/* Responsive Grid 
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); */
