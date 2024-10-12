@@ -20,9 +20,11 @@ File: requirements-styles.css
     MAIN STYLES
 -----------------------------------------------------------*/
 
+#requirements-main {
+}
+
 .audio-container {
     align-items: center;
-    background-color: var(--transparent-white-2);
     border-bottom: 2px dotted var(--medium-pink);
     border-top: 2px dotted var(--medium-pink);
     display: flex;
@@ -93,4 +95,20 @@ File: requirements-styles.css
     font-size: 1rem;
     line-height: 1.5rem;
     padding: 0.5rem 1rem 2rem 3rem;
+}
+
+.fun-stuff-top {
+    margin: 2rem auto 0;
+    text-align: center;
+    background-color: var(--transparent-green);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    max-width: 30rem;
+    border: 1px solid var(--transparent-green);
+    box-shadow: var(--box-shadow);
+}
+
+.fun-stuff-top p {
+    font-size: 1rem;
+    line-height: 1.5rem;
 }

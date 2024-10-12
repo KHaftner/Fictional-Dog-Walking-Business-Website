@@ -176,7 +176,8 @@ select {
 }
 
 .submit-button,
-.reset-button {
+.reset-button,
+input[type="date"] {
     cursor: pointer;
 }
 

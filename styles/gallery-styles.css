@@ -29,8 +29,70 @@ File: gallery-styles.css
     background-repeat: no-repeat;
 }
 
-/* Responsive Grid 
+.gallery {
+    background-color: var(--lightest-purple);
+}
 
+.gallery h2 {
+    letter-spacing: 0.25rem;
+    margin-top: 0;
+    padding-top: 2rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    border-bottom: 6px dotted var(--white);
+    text-shadow: var(--nav-text-shadow);
+}
+
+.gallery-itself img {
+    border: 6px solid var(--white);
+    object-fit: cover;
+    width: 18rem;
+    height: 12rem;
+    box-shadow: var(--box-shadow);
+    transform: rotateX("1rem");
+    transition: all 1s ease;
+}
+
+.gallery-itself a:hover img {
+    transform: rotateY(180deg);
+    filter: sepia(1);
+}
+
+.gallery-itself {
+    max-width: 120rem;
+    margin: 0 auto;
+    justify-items: center;
+    padding: 1rem 1rem 4rem;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    border-bottom: 2px solid var(--transparent-purple);
+}
+
+.gallery-bottom {
+    clear: both;
+    min-height: max(40rem, 50vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../media/gallery-bottom.jpg);
+    background-blend-mode: soft-light;
+    background-color: var(--transparent-purple);
+    background-size: cover;
+    background-position: 50% 90%;
+    background-repeat: no-repeat;
+    padding-bottom: 2rem;
+    background-origin: content-box;
+}
+
+.gallery-bottom p {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    max-width: 80%;
+    letter-spacing: 0.25rem;
+    backdrop-filter: blur(1rem);
+    padding: 2rem;
+    border: 1px solid var(--transparent-black);
+    border-radius: 2rem;
+    font-family: var(--fancy-heading);
+    text-shadow: var(--light-text-shadow);
+}

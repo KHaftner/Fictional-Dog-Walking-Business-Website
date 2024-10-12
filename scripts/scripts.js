@@ -78,8 +78,10 @@ function validateForm(event) {
     }
 }
 
-// Use event listener for the form submission.
-document.forms["contactUs"].addEventListener("submit", validateForm);
+if (document.body.classList.contains("contact-page")) {
+    // Use event listener for the form submission.
+    document.forms["contactUs"].addEventListener("submit", validateForm);
+}
 
 /*-----------------------------------------------------------
     DISPLAY CURRENT DATE ON TESTIMONIALS PAGE
