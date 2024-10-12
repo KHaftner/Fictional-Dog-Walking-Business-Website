@@ -7,7 +7,7 @@ Dog Walking Business Website
 
 Page: Services Page Style Sheet
 Author: Kassandra Haftner
-Last Updated: 7 Oct 2024
+Last Updated: 12 Oct 2024
 
 A CSS style sheet for the main Services page.
 
@@ -61,6 +61,7 @@ File: services-styles.css
     box-shadow: var(--box-shadow);
     width: clamp(18rem, 40vw, 25rem);
     margin: 1rem auto;
+    opacity: 0.8;
 }
 
 .service-text > p:first-of-type {

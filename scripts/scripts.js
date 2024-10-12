@@ -1,3 +1,7 @@
+/*-----------------------------------------------------------
+    FOOTER DATES
+-----------------------------------------------------------*/
+
 // Display the current year in the footer.
 const currentYear = document.getElementById("current-year");
 currentYear.textContent = new Date().getFullYear();
@@ -7,6 +11,10 @@ const revisedTag = document.querySelector('meta[name="revised"]');
 const revisedDate = revisedTag.getAttribute("content");
 textFooter = document.getElementById("revision-date");
 textFooter.textContent = revisedDate;
+
+/*-----------------------------------------------------------
+    CONTACT PAGE VALIDATION
+-----------------------------------------------------------*/
 
 function validateForm(event) {
     // Prevent form submission when fields are not filled out correctly.
@@ -25,7 +33,7 @@ function validateForm(event) {
         let desiredDate = document.forms["contactUs"]["desiredDate"].value;
         let message = document.forms["contactUs"]["message"].value;
 
-        // Validate each field with some basic checks and show alert if it's invalid.
+        // Validate each field and show alert if it's invalid.
         if (yourName === "") {
             alert("Whoops, please enter your name!");
             return false;
@@ -71,10 +79,9 @@ function validateForm(event) {
             alert("Whoops, please provide additional information or comments!");
             return false;
         }
-
-        // If all validations pass, allow form submission
+        // If all validations pass, the form can submit!
         alert("Thanks so much, we've received your form request!");
-        return true; // This is necessary for the form to submit
+        return true;
     }
 }
 
@@ -84,7 +91,38 @@ if (document.body.classList.contains("contact-page")) {
 }
 
 /*-----------------------------------------------------------
-    DISPLAY CURRENT DATE ON TESTIMONIALS PAGE
+    INDEX PAGE IMAGE ARRAY
+-----------------------------------------------------------*/
+
+// Changes the background of the bottom portion with the quote, on the index page.
+if (document.body.classList.contains("index-page")) {
+    const randomImages = [
+        "url(media/index-bottom-image.jpg)",
+        "url(media/index-bottom-image2.jpg)",
+        "url(media/index-bottom-image3.jpg)",
+        "url(media/index-bottom-image4.jpg)",
+        "url(media/index-bottom-image5.jpg)",
+        "url(media/index-bottom-image6.jpg)",
+        "url(media/index-bottom-image7.jpg)",
+        "url(media/index-bottom-image8.jpg)",
+        "url(media/index-bottom-image9.jpg)",
+    ];
+
+    function changeBackground() {
+        setInterval(randomBottomImage, 5000);
+    }
+
+    function randomBottomImage() {
+        const bottomContainer = document.getElementById("bottom-section");
+        const image = Math.floor(Math.random() * randomImages.length);
+        bottomContainer.style.backgroundImage = randomImages[image];
+    }
+
+    changeBackground();
+}
+
+/*-----------------------------------------------------------
+    DISPLAY CURRENT DATE ON REQUIREMENTS PAGE
 -----------------------------------------------------------*/
 
 const currentDateTime = document.getElementById("current-date-time");

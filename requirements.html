@@ -12,7 +12,7 @@ Dog Walking Business Website
 
 Page: Project Requirements Page
 Author: Kassandra Haftner
-Last Updated: 28 Sep 2024
+Last Updated: 12 Oct 2024
 
 This is the requirements page for my project.
 
@@ -31,7 +31,7 @@ File: requirements.html
         content="Dogs, Walking, Boarding, Service, Pet-Sitting, Affordable, Convenient, Port Moody, Coquitlam">
     <meta name="author" content="Puppers on Patrol">
     <meta name="designer" content="Kassandra Haftner">
-    <meta name="revised" content="October 8, 2024">
+    <meta name="revised" content="October 12, 2024">
     <meta name="robots" content="index, follow">
 
     <!-- Page's Title -->
@@ -180,11 +180,11 @@ File: requirements.html
 
     <main class="requirements-main" id="requirements-main">
         <div class="other-top-wrapper req-page-top-wrapper">
-            <h1 id="project-checklist">Project Checklist</h1>
+            <h1 id="project-checklist">Project Requirements</h1>
         </div>
         <section class="fun-stuff-top">
             <div class="date-time-container">
-                <p>Hey there! The current date & time is: <br><strong id="current-date-time">(current
+                <p id="example-p">Hey there! The current date & time is: <br><strong id="current-date-time">(current
                         date/time)</strong>.</p>
             </div>
             <div class="audio-container">
@@ -194,115 +194,148 @@ File: requirements.html
             </div>
         </section>
         <section class="requirements-list">
-            <h2>Cross-Reference Page Requirements</h2>
-            <ul>
-                <li>Each item on the cross-reference page must be a hyperlink to the associated item within the website
-                    and include a description of what the link is going to show. Your website must demonstrate the
-                    appropriate, relevant, and functional use of each of the required features.</li>
-                <li>The cross-reference page should include the following: Nine websites, Minimum Requirement Features,
-                    Documentation, and Demonstration Evaluation Form</li>
-            </ul>
-            <h2>Minimum Requirement Features</h2>
-            <ul>
-                <li>Forms with form validations.</li>
-                <li>JavaScript usage: Please explain what you used and where.</li>
-                <li>Appropriate HTML5 tags, including use of HTML5 structural tags, a, p, blockquote, ol,
-                    ul, and dl, to
-                    name a few.</li>
-                <li>Inline images both static and clickable.</li>
-                <li>Use of appropriate special characters.</li>
-                <li>Use of appropriate meta tags.</li>
-                <li>A footer on the home page indicating when the website was last updated or modified.
+            <h2 id="min-features">Minimum Requirement Features</h2>
+            <ul id="ul-example">
+                <li><a href="contact.html">Form with form validations</a>. All invalid input will be highlighted in red
+                    and if the user submits without filling out all the fields, JavaScript alerts pop up.</li>
+                <li>JavaScript usage: <a href="#top">Navigation bar</a> that shrinks on scroll on
+                    desktop & a mobile
+                    hamburger menu, an array of
+                    images that changes every 5 seconds on the <a href="index.html#bottom-section">home page at the
+                        bottom</a>, the current date and time at the
+                    top of <a href="#top">this page</a>, the current year and last revised date in the <a
+                        href="#site-footer">footer</a>.</li>
+                <li>Appropriate HTML5 tags, including use of HTML5 structural tags, <a href="#min-features">a</a>, <a
+                        href="#example-p">p</a>,
+                    <a href="testimonials.html#example-blockquote">blockquote</a>, <a
+                        href="walking.html#ol-example">ol</a>, <a href="#ul-example">ul</a>, and <a
+                        href="#dl-example">dl</a>, to
+                    name a few.
                 </li>
-                <li>Use CSS3 to format the appearance of paragraphs, lists, headers, background images, tables, and
-                    forms.</li>
+                <li>Inline images both <a href="about.html#static-image">static</a> and <a
+                        href="gallery.html#clickable-ex">clickable</a>.</li>
+                <li>Use of appropriate <a href="walking.html#special-char">special characters</a>.</li>
+                <li>Use of appropriate meta tags. I don't think I can link to this one, but all of the pages have them
+                    in the code.</li>
+                <li>A footer on the home page indicating <a href="#site-footer">when the website was last updated or
+                        modified</a>.
+                </li>
+                <li>Use CSS3 to format the appearance of <a href="#example-p">paragraphs</a>, <a
+                        href="#ul-example">lists</a>, <a href="#top">headers</a>, <a href="contact.html">background
+                        images</a>, <a href="walking.html">tables</a>, and
+                    <a href="contact.html">forms</a>. Pretty much everything on this website has been styled in some
+                    form.
+                </li>
                 <li>Use CSS3 contextual selectors (e1, e2, e3; e f; e > f; e + f) and at least two attribute selectors,
-                    excluding class and id attribute selectors.</li>
-                <li>Use CSS3 styles for colour (RGBA & HSLA).</li>
-                <li>Use dynamic pseudo-classes to highlight hyperlinks states of link (visited, active, and
-                    hover),
-                    focus, and two structural pseudo-classes (first-of-type and last-of-type).</li>
-                <li>Use CSS3 background styles (background size, <strong>background-clip, background-origin</strong>,
-                    padding, margins,
-                    borders, use of an appropriate border style, and use of rounded corners).</li>
-                <li>Your home page should have a drop cap created with CSS3.</li>
-                <li>Define document content with the class and id properties, and create styles for them.
+                    excluding class and id attribute selectors. <strong>A bunch of different selectors were used in the
+                        code to
+                        style things on most pages. Attribute selectors were used to style the contact page form, which
+                        has
+                        been linked already</strong>.</li>
+                <li>Use CSS3 styles for colour (RGBA & HSLA). <strong>See the top of the main style sheet for all the
+                        colour
+                        variables</strong>.</li>
+                <li>Use dynamic pseudo-classes to highlight <a href="index.html#hover-example">hyperlinks states of link
+                        (visited, active, and
+                        hover)</a>,
+                    <a href="contact.html">focus</a>, and two structural pseudo-classes (<a
+                        href="services.html">first-of-type and last-of-type</a> -- Both were used on the Services page
+                    right beside each other in the code.).
                 </li>
-                <li>Use each of the following page layout techniques: <strong>Grid</strong>, Flex, Float, and
-                    Positioning. Note: Do not
-                    mix multiple page layout techniques on a single page. The use of framework for layout is discouraged
-                    due to too many unknown factors.</li>
-                <li>Use CSS3 text and box shadows.</li>
-                <li>Use CSS3 transform rotate feature.</li>
-                <li>Use CSS3 opacity applied to two images to appear semi-transparent.</li>
-                <li>Use appropriate form elements including some of the new HTML5 form elements.</li>
-                <li>Apply appropriate styles to web forms.</li>
-                <li>Apply inline form validation by using the focus pseudo-class to appropriate form elements.</li>
-                <li>Use sound and video somewhere on your website. Ensure these are of short duration, preferably
+                <li>Use CSS3 background styles (background size, background-clip, background-origin,
+                    padding, margins,
+                    borders, use of an appropriate border style, and use of rounded corners). <strong>All were used on
+                        almost all of the pages in the code. I probably overuse borders and rounded corners, honestly,
+                        hehe.</strong> Exceptions: <a href="walking.html#background-clip">background-clip</a> & <a
+                        href="gallery.html#background-origin">background-origin</a> were used once.</li>
+                <li>Your home page should have a <a href="index.html#drop-cap">drop cap</a> created with CSS3.</li>
+                <li>Define document content with the class and id properties, and create styles for them. <strong>Done
+                        throughout the entire website</strong>.
+                </li>
+                <li>Use each of the following page layout techniques: <a href="gallery.html">Grid</a>, <a
+                        href="index.html">Flex</a>, <a href="services.html">Float</a>, and
+                    <a href="#top">Positioning</a>. Grid was used for the gallery page, flex was used on most pages
+                    because it's my preferred method, float was used on the main services page, and positioning was used
+                    in the navigation bar.
+                </li>
+                <li>Use CSS3 text and box shadows. <strong>Done throughout all pages</strong>.</li>
+                <li>Use CSS3 transform <a href="gallery.html">rotate</a> feature.</li>
+                <li>Use CSS3 <a href="services.html">opacity applied to two images to appear semi-transparent</a>.</li>
+                <li>Use appropriate <a href="contact.html">form</a> elements including some of the new HTML5 form
+                    elements. Apply appropriate styles to web forms. Apply inline form validation by using the focus
+                    pseudo-class to appropriate form elements. Use JavaScript alerts for validation purposes.</li>
+                <li>Use <a href="#top">sound</a> and <a href="testimonials.html">video</a> somewhere on your website.
+                    Ensure
+                    these are of short duration, preferably
                     about
                     30 seconds.</li>
-                <li>Use transitions and animations.</li>
+                <li>Use transitions and animations. <strong>Transitions used on almost all of the pages (if not all).
+                        Animation in the footer with the back-top-top arrow.</strong></li>
                 <li>Use variables; arithmetic, comparison and logical operators; subroutines; functions; arrays;
-                    conditional statements; conditional operators; and running time commands with system clock.</li>
-                <li>Use system date (example: clock, countdown timer to an event) on your website.</li>
-                <li>Validate form input by using appropriate JavaScript functions.</li>
-                <li>Use JavaScript alerts for validation purposes.</li>
-                <li>Your website design should include responsive design implementation using concepts
-                    covered in this
-                    course that would accommodate desktop, tablet, and mobile designs, including positioning, grid,
-                    and
-                    flex layouts.</li>
-                <li>The use of contextual selectors to control sub-level menus is required, including a
-                    navicon image
-                    for mobile design.</li>
-                <li>Images should also be responsive for different screen sizes and devices.</li>
+                    conditional statements; conditional operators; and running time commands with system clock.
+                    <strong>See JavaScript code for these details</strong>.
+                </li>
+                <li>Use <a href="#top">system date</a> (example: clock, countdown timer to an event) on your website.
+                </li>
             </ul>
             <h2>Demonstration Evaluation Form</h2>
-            <p><a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSeCNJFLme-3dNTmQY9N7Z6lFTWb3tEmG9BtPrGpPzRWEtzhCQ/viewform?usp=sf_link">Evaluation
+            <p class="form"><a
+                    href="
+                        https://docs.google.com/forms/d/e/1FAIpQLSeCNJFLme-3dNTmQY9N7Z6lFTWb3tEmG9BtPrGpPzRWEtzhCQ/viewform?usp=sf_link"
+                    target="_blank">Evaluation
                     Form Link</a></p>
             <h2>Documentation</h2>
-            <p>Put here.</p>
+            <p class="form"><a href="./media/project-documentation.pdf" target="_blank">Project PDF</a></p>
 
             <h2 id="nine-websites">Nine Websites</h2>
             <nav class="websites-list">
-                <dl>
+                <dl id="dl-example">
                     <dt><a href="https://uptowndawg.com/">Uptown Dawg</a>
                     </dt>
                     <dd>A local dog walking business based in Port Moody, British Columbia, with a nice, clean
-                        layout. I could tell it was a
-                        WordPress site before I checked it out on Wappalyzer. Its menu has some hover effects that I
-                        enjoy. This website was a good resource to guide me towards the types of services and pages
+                        layout. Its menu has some hover effects
+                        that I
+                        enjoy. This website was a good resource to guide me towards the types of services and
+                        pages
                         my website should include.</dd>
                     <dt><a href="http://wags2whiskers.ca/">Wags to Whiskers</a></dt>
-                    <dd>A local dog walking business based in Coquitlam, British Columbia, whose website magically
+                    <dd>A local dog walking business based in Coquitlam, British Columbia, whose website
+                        magically
                         transports the visitor to the
                         year
-                        2002. While I like the nostalgia factor, they would really benefit from a re-design.</dd>
+                        2002. While I like the nostalgia factor, they would really benefit from a re-design.
+                    </dd>
                     <dt><a href="https://wildthymedogs.com/">Wild Thyme Dogs</a></dt>
                     <dd>A local dog walking business based in Anmore, British Columbia. This website is also
                         helpful as a reference for the services offered and I enjoy their testimonial page.
                     </dd>
                     <dt><a href="https://unsplash.com/">Unsplash</a>
                     </dt>
-                    <dd>One of the websites I use to source my stock images. Free & attribution not required.</dd>
+                    <dd>One of the websites I use to source my stock images. Free & attribution not required.
+                    </dd>
                     <dt><a href="https://www.pexels.com/">Pexels</a></dt>
-                    <dd>One of the websites I use to source my stock images & videos. Free & attribution not required.
+                    <dd>One of the websites I use to source my stock images & videos. Free & attribution not
+                        required.
                     </dd>
                     <dt><a href="https://pixabay.com/">Pixabay</a></dt>
-                    <dd>One of the websites I use to source my stock images & videos. Free & attribution not required.
+                    <dd>One of the websites I use to source my stock images & videos. Free & attribution not
+                        required.
                     </dd>
                     <dt><a href="https://shapedividers.com/">SVG Shape Dividers Creator</a>
                     </dt>
-                    <dd>This is a really cool website that generates SVG dividers of different shapes for people to use
-                        on their page for free. I used it on my index page a few times and at the bottom of other pages.
+                    <dd>This is a really cool website that generates SVG dividers of different shapes for people
+                        to use
+                        on their page for free. I used it on my index page a few times and at the bottom of
+                        other pages.
                     </dd>
                     <dt><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></dt>
-                    <dd>One of the websites I reference the most while working on web development assignments. It's so
+                    <dd>One of the websites I reference the most while working on web development assignments.
+                        It's so
                         helpful!
                     </dd>
                     <dt><a href="https://www.w3schools.com/">W3Schools</a></dt>
-                    <dd>Another website that I frequently reference! I know we used this one in this class too. It's
+                    <dd>Another website that I frequently reference! I know we used this one in this class too.
+                        It's
                         pretty helpful!
                     </dd>
                 </dl>
@@ -312,7 +345,7 @@ File: requirements.html
 
     <!-- Footer Content -->
 
-    <footer class="site-footer">
+    <footer class="site-footer" id="site-footer">
         <div class="back-to-top">
             <a href="#top"> <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                     clip-rule="evenodd">

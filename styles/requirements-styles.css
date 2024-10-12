@@ -7,7 +7,7 @@ Dog Walking Business Website
 
 Page: Requirements Page Style Sheet
 Author: Kassandra Haftner
-Last Updated: 7 Oct 2024
+Last Updated: 12 Oct 2024
 
 A CSS style sheet for the Requirements page styles.
 
@@ -19,9 +19,6 @@ File: requirements-styles.css
 /*-----------------------------------------------------------
     MAIN STYLES
 -----------------------------------------------------------*/
-
-#requirements-main {
-}
 
 .audio-container {
     align-items: center;
@@ -111,4 +108,8 @@ File: requirements-styles.css
 .fun-stuff-top p {
     font-size: 1rem;
     line-height: 1.5rem;
+}
+
+p.form {
+    text-align: center;
 }
