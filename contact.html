@@ -189,7 +189,7 @@ File: contact.html
                 clients will need to have a meet & greet with us first, free of charge. &#128522;</p>
             <p class="required-fields"><strong>Note</strong>: All of the fields are required, so make sure to fill out
                 them all!</p>
-            <form name="contact-us" id="contact-us" class="contact-us" action="#" method="post">
+            <form name="contactUs" id="contact-us" class="contact-us" action="#" method="post" novalidate>
                 <fieldset id="personal-info">
                     <legend>Your Information</legend>
                     <div class="form-field">
@@ -242,17 +242,6 @@ File: contact.html
                         </select>
                     </div>
                     <div class="form-field">
-                        <label for="reason">What is your reason for contacting us? <strong>*</strong></label>
-                        <select name="reason" id="reason" required>
-                            <option value="" disabled selected hidden>Select your reason for contacting us...
-                            </option>
-                            <option value="help">I need help with something.</option>
-                            <option value="comments">I have comments about the website.</option>
-                            <option value="contribution">I want to contribute to the website.</option>
-                            <option value="other">Other - Please specify details below.</option>
-                        </select>
-                    </div>
-                    <div class="form-field">
                         <label for="desiredDate">Desired Date of Booking</label>
                         <input type="date" id="desiredDate" name="desiredDate" required />
                     </div>
@@ -264,8 +253,8 @@ File: contact.html
                     </div>
                 </fieldset>
                 <fieldset id="form-buttons" class="form-buttons">
-                    <input value="Submit Details" type="submit" class="submit-button" />
-                    <input value="Cancel Details" type="reset" class="reset-button" />
+                    <input value="Submit Details" type="submit" id="submit-button" class="submit-button" />
+                    <input value="Cancel Details" type="reset" id="reset-button" class="reset-button" />
                 </fieldset>
             </form>
         </section>

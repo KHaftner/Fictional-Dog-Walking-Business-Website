@@ -8,99 +8,78 @@ const revisedDate = revisedTag.getAttribute("content");
 textFooter = document.getElementById("revision-date");
 textFooter.textContent = revisedDate;
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Check if the body has the class 'contact-page'
+function validateForm(event) {
+    // Prevent form submission when fields are not filled out correctly.
+    event.preventDefault();
+
     if (document.body.classList.contains("contact-page")) {
-        // Form Validating with Alerts as per the Requirements
+        // Form Validating with Alerts as per the Requirements.
+        let yourName = document.forms["contactUs"]["yourName"].value;
+        let dogName = document.forms["contactUs"]["dogName"].value;
+        let city = document.forms["contactUs"]["city"].value;
+        let breed = document.forms["contactUs"]["breed"].value;
+        let phone = document.forms["contactUs"]["phone"].value;
+        let dogAge = document.forms["contactUs"]["dogAge"].value;
+        let serviceInterest =
+            document.forms["contactUs"]["serviceInterest"].value;
+        let desiredDate = document.forms["contactUs"]["desiredDate"].value;
+        let message = document.forms["contactUs"]["message"].value;
 
-        document
-            .getElementById("contact-us")
-            .addEventListener("submit", function (event) {
-                // Prevent the form from submitting if invalid.
-                event.preventDefault();
+        // Validate each field with some basic checks and show alert if it's invalid.
+        if (yourName === "") {
+            alert("Whoops, please enter your name!");
+            return false;
+        }
+        if (dogName === "") {
+            alert("Whoops, please enter your dog's name!");
+            return false;
+        }
+        if (city === "") {
+            alert("Whoops, please enter your city!");
+            return false;
+        }
+        if (breed === "") {
+            alert("Whoops, please enter your dog's breed!");
+            return false;
+        }
+        if (phone === "") {
+            alert("Whoops, please enter your phone number!");
+            return false;
+        }
 
-                // Fetch the values from the form fields.
-                let yourName = document.getElementById("yourName").value;
-                let dogName = document.getElementById("dogName").value;
-                let city = document.getElementById("city").value;
-                let breed = document.getElementById("breed").value;
-                let phone = document.getElementById("phone").value;
-                let dogAge = document.getElementById("dogAge").value;
-                let serviceInterest =
-                    document.getElementById("serviceInterest").value;
-                let reason = document.getElementById("reason").value;
-                let desiredDate = document.getElementById("desiredDate").value;
-                let message = document.getElementById("message").value;
+        // Check for phone's format using JavaScript.
+        const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+        if (!phonePattern.test(phone)) {
+            alert(
+                "Whoops, please enter your phone number in the correct format (123-456-7890)!"
+            );
+            return false;
+        }
+        if (dogAge === "") {
+            alert("Whoops, please select your dog's age!");
+            return false;
+        }
+        if (serviceInterest === "") {
+            alert("Whoops, please select the service you are interested in!");
+            return false;
+        }
+        if (desiredDate === "") {
+            alert("Whoops, please select your desired date of booking!");
+            return false;
+        }
+        if (message === "") {
+            alert("Whoops, please provide additional information or comments!");
+            return false;
+        }
 
-                let isValid = true;
-
-                // Validate each field with some basic checks and show alert if it's invalid.
-                if (yourName === "") {
-                    alert("Whoops, please enter your name!");
-                    isValid = false;
-                }
-                if (dogName === "") {
-                    alert("Whoops, please enter your dog's name!");
-                    isValid = false;
-                }
-                if (city === "") {
-                    alert("Whoops, please enter your city!");
-                    isValid = false;
-                }
-                if (breed === "") {
-                    alert("Whoops, please enter your dog's breed!");
-                    isValid = false;
-                }
-                if (phone === "") {
-                    alert("Whoops, please enter your phone number!");
-                    isValid = false;
-                }
-
-                // Check for phone's format using JavaScript.
-                const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
-                if (!phonePattern.test(phone)) {
-                    alert(
-                        "Whoops, please enter your phone number in the correct format (123-456-7890)!"
-                    );
-                    isValid = false;
-                }
-                if (dogAge === "") {
-                    alert("Whoops, please select your dog's age!");
-                    isValid = false;
-                }
-                if (serviceInterest === "") {
-                    alert(
-                        "Whoops, please select the service you are interested in!"
-                    );
-                    isValid = false;
-                }
-                if (reason === "") {
-                    alert(
-                        "Whoops, please select your reason for contacting us!"
-                    );
-                    isValid = false;
-                }
-                if (desiredDate === "") {
-                    alert(
-                        "Whoops, please select your desired date of booking!"
-                    );
-                    isValid = false;
-                }
-                if (message === "") {
-                    alert(
-                        "Whoops, please provide additional information or comments!"
-                    );
-                    isValid = false;
-                }
-
-                // If everything is a-ok and valid, the form can go through!
-                if (isValid) {
-                    alert("Thanks so much, we've received your form request!");
-                    event.target.submit();
-                }
-            });
+        // If all validations pass, allow form submission
+        alert("Thanks so much, we've received your form request!");
+        return true; // This is necessary for the form to submit
     }
-});
+}
+
+// Use event listener for the form submission.
+document.forms["contactUs"].addEventListener("submit", validateForm);
 
 /*-----------------------------------------------------------
     DISPLAY CURRENT DATE ON TESTIMONIALS PAGE

@@ -46,21 +46,26 @@ File: contact-styles.css
 }
 
 .contact-form p {
-    line-height: 2rem;
-    padding: 0 0.5rem;
+    line-height: 2.5rem;
+    padding: 0.5rem;
 }
 
 .contact-form p.required-fields {
+    background-color: var(--transparent-white);
+    border: 1px dotted var(--transparent-purple);
+    border-radius: 0.5rem;
     font-weight: 400;
     font-size: 0.9rem;
     line-height: 1.25rem;
     margin-top: -1rem auto 2rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
 }
 
 form {
     background-color: var(--transparent-dark-green);
     border: 1px solid var(--black);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     font-family: var(--body);
     padding: 0.5rem;
 }
@@ -74,7 +79,7 @@ form legend {
 }
 
 form fieldset {
-    border: 2px dotted var(--transparent-white2);
+    border: 1px solid var(--dark-green);
     border-radius: 0.25rem;
     margin: 0 auto;
     padding: 1rem;
@@ -96,16 +101,10 @@ form ::placeholder {
     font-style: italic;
 }
 
-input[type="date"] {
-    appearance: none;
-    -webkit-appearance: none;
-}
-
 input[type="text"],
 input[type="tel"],
-input[type="email"],
 input[type="date"] {
-    background-color: var(--transparent-white);
+    background-color: var(--white);
     border-radius: 0.25rem;
     height: 2rem;
 }
@@ -124,7 +123,7 @@ input[type="date"] {
 
 select,
 textarea {
-    background-color: var(--transparent-white);
+    background-color: var(--white);
     border-radius: 0.25rem;
 }
 
@@ -144,40 +143,22 @@ input[type="reset"] {
 }
 
 input[type="text"]:focus,
-input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="date"]:focus,
 select:focus,
 textarea:focus,
 input[type="text"]:hover,
-input[type="email"]:hover,
 input[type="tel"]:hover,
 input[type="date"]:hover,
 select:hover,
 textarea:hover,
 input[type="text"]:active,
-input[type="email"]:active,
 input[type="tel"]:active,
 input[type="date"]:active,
 select:active,
 textarea:active {
-    background-color: var(--white);
+    background-color: var(--light-purple);
     border: 1px solid var(--black);
-}
-
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="reset"]:active {
-    background-color: var(--green);
-    border: 2px solid var(--white);
-    box-shadow: var(--box-shadow);
-    color: var(--white);
-    font-weight: bold;
-    text-shadow: var(--text-shadow);
-    transition: 0.1s ease;
 }
 
 select {
@@ -222,6 +203,29 @@ select:focus:invalid {
     background-position: 90% 50%;
 }
 
+.form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input#submit-button:focus:valid,
+input#submit-button:focus:invalid,
+input#reset-button:focus:valid,
+input#reset-button:focus:invalid {
+    background-color: var(--dark-green);
+    border: 1px solid var(--white);
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+    text-shadow: var(--text-shadow);
+}
+
 /*-----------------------------------------------------------
     MEDIA QUERIES
 -----------------------------------------------------------*/
@@ -256,13 +260,14 @@ select:focus:invalid {
     }
 
     input[type="text"],
-    input[type="tel"] {
+    input[type="tel"],
+    input[type="date"] {
         height: 2.5rem;
     }
 
     .form-field {
         align-items: center;
-        display: flex;
+        flex-direction: row;
     }
 
     .form-field label {
